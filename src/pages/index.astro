@@ -50,7 +50,7 @@ const homeSchema = [
   <!-- Split Hero -->
   <div class="relative overflow-hidden text-white" style="background: #0c1410;">
     <div class="absolute inset-0 pointer-events-none">
-      <img src={heroPhoto.src} alt="" aria-hidden="true" fetchpriority="high" class="w-full h-full object-cover opacity-55" />
+      <img src={heroPhoto.src} alt="" aria-hidden="true" width="1600" height="900" fetchpriority="high" class="w-full h-full object-cover opacity-55" />
       <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/70" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
     </div>
@@ -140,6 +140,8 @@ const homeSchema = [
               <img
                 src={optimizeImageSrc(cat.heroImage, 1200)}
                 alt={`${cat.name} locksmith service in New Jersey`}
+                width="1200"
+                height="800"
                 loading="lazy"
                 decoding="async"
                 class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-65 group-hover:scale-105 transition-all duration-500"
