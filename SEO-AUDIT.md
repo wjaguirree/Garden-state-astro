@@ -118,14 +118,20 @@ distinct content justifies keeping both pages (also aligns with the max-indexed-
   `/services/{category}/` hubs (they already linked sub-services).
 Verified: 0 duplicate titles/descriptions, one H1 per page, all four title pairs distinct.
 
-### P2 — Remote (hotlinked) Unsplash images → localize
-**Affected:** `src/data/services.ts`, `src/pages/about.astro`, `src/pages/residential-locksmith.astro`,
-`src/pages/automotive-locksmith.astro`, `src/components/shared/{EmergencyCTA,TestimonialSection}.astro`,
-`src/lib/image.ts`.
-**Issue:** several images are hotlinked from `images.unsplash.com`. That adds third-party requests
-on ~2,500 pages (LCP/perf risk), depends on an external host's uptime, and isn't optimized/served
-in a modern format from your own domain. **Recommended fix:** download, optimize (WebP), store in
-`src/assets/` or `public/`, and reference locally — mirroring the already-localized hero assets.
+### P2 — Remote (hotlinked) Unsplash images → localize  ✅ shipped (no downloads needed)
+**Affected:** `src/pages/about.astro`, `src/pages/residential-locksmith.astro`,
+`src/pages/automotive-locksmith.astro`, `src/components/shared/{EmergencyCTA,TestimonialSection}.astro`.
+**Issue:** these rendered images were hotlinked from `images.unsplash.com` — third-party requests
+(LCP/perf risk), dependence on an external host, and not served from the site's own domain.
+**Fix:** swapped every rendered Unsplash hotlink to an **existing local asset** already in the repo
+(e.g. `/van-bg.jpg`, `/car-lockout-service-new-jersey.webp`, `/deadbolt-installation-nj.jpg`) — no
+external downloads required, and it puts on-brand imagery (the Garden State van) on the About hero.
+**Verified:** built output now has **0** `images.unsplash.com` references (was on ~130+ pages via the
+shared CTA/testimonial components).
+
+> **Dead code noted (not blocking):** the 14 Unsplash URLs in `src/data/services.ts` render on
+> **0 pages** — `services` is imported by two routes but unused (only `categories` data is rendered).
+> Recommend removing the unused `services` import + `services.ts` in a separate cleanup.
 
 ### P3 — Additional sitemaps requested
 - **Image sitemap:** not currently generated (`@astrojs/sitemap` doesn't emit image entries by
