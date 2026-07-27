@@ -54,7 +54,7 @@ const { kind } = Astro.props;
 
     return (
       <BaseLayout
-        title={`${category.name} in New Jersey | Garden State Locksmith`}
+        title={`${category.name} Services in NJ — All ${category.subServices.length} Services | Garden State`}
         description={category.description.slice(0, 155)}
         canonical={`/services/${category.slug}`}
         schema={schemaData}

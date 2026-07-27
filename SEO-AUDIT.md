@@ -100,23 +100,23 @@ missing.
 
 ## 3. Remaining recommendations (prioritized — not yet executed)
 
-### P2 — Category landing cannibalization (judgment call — your decision)
+### P2 — Category landing / hub intent overlap  ✅ shipped (differentiate, not consolidate)
 **Affected:** `src/pages/{emergency,residential,commercial,automotive}-locksmith.astro`
 **vs** the hubs `/services/{category}/` (`src/pages/services/[serviceSlug].astro`).
-**Issue:** two indexable, self-canonical pages target the same head term (e.g. "emergency
-locksmith NJ") — the standalone landing (248–601 words) and the category hub (479–515 words).
-Both are internally linked (footer → standalone; breadcrumbs/cards → hub). This splits ranking
-signals.
-**Options:**
-1. **Consolidate (technically strongest):** canonical/301 the 4 standalone pages → their hubs,
-   drop them from the sitemap, repoint footer links. Matches the repo's existing pattern
-   (`_redirects` already consolidates flat service pages → hubs). Net: −4 indexed URLs, stronger
-   hubs. This is the one place where *fewer* indexed URLs = *better* ranking.
-2. **Differentiate:** keep both, but make the standalone pages a genuinely distinct
-   transactional/landing intent vs. the hub's service directory, and cross-link. Preserves count;
-   less certain to fully resolve competition.
-**Recommendation:** Option 1 unless you have external links/GBP pointing at the pretty
-`/emergency-locksmith/` URLs. Left unexecuted pending your call on page-count vs. consolidation.
+**Re-measured finding:** the standalone landings and hubs have **~0% content overlap**
+(0.0–0.4% 5-gram Jaccard) — this was **not** a duplicate-content problem, only a head-term
+title/intent overlap plus an internal-linking gap. Consolidation was therefore unnecessary; the
+distinct content justifies keeping both pages (also aligns with the max-indexed-pages goal).
+**Fixes shipped:**
+- **Differentiated titles** so each pair targets distinct intent — hubs now read
+  "{Category} Locksmith Services in NJ — All N Services" (directory intent); landings lead with a
+  transactional/benefit angle (e.g. "Residential Locksmith NJ — Home Lockouts, Rekeys & Deadbolts").
+- **Fixed the emergency landing dead-end:** `emergency-locksmith.astro` previously had zero links
+  to its 6 sub-services (plain-text list). It now renders a linked "Emergency Services We Handle"
+  grid + a "browse by town" link to the hub.
+- **Added hub cross-links** from the residential/commercial/automotive landings to their
+  `/services/{category}/` hubs (they already linked sub-services).
+Verified: 0 duplicate titles/descriptions, one H1 per page, all four title pairs distinct.
 
 ### P2 — Remote (hotlinked) Unsplash images → localize
 **Affected:** `src/data/services.ts`, `src/pages/about.astro`, `src/pages/residential-locksmith.astro`,
