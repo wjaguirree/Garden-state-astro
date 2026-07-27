@@ -13,6 +13,9 @@ import {
   makeIntroP2,
   makeWhyUs,
   makeFAQs,
+  makeServiceFAQs,
+  makeServiceDeepDive,
+  serviceDeepDiveHeading,
   whyHeading,
   aboutHeading,
   nearbyHeading,
@@ -55,7 +58,9 @@ const metaDescription = makeMeta(subService, location, seed);
 const introP1 = makeIntroP1(subService, category, location, seed);
 const introP2 = makeIntroP2(subService, location, seed);
 const whyUs = makeWhyUs(category, location, seed);
-const faqs = makeFAQs(subService, category, location, seed);
+const serviceDeepDive = makeServiceDeepDive(subService, category, location, seed);
+const deepDiveHeading = serviceDeepDiveHeading(subService, location, seed);
+const faqs = [...makeServiceFAQs(subService, category, location, seed), ...makeFAQs(subService, category, location, seed)];
 const whyTitle = whyHeading(location, seed);
 const aboutTitle = aboutHeading(location, seed);
 const nearbyTitle = nearbyHeading(location, subService, seed);
@@ -188,6 +193,11 @@ const faqSchema = {
             <h2 class="text-2xl md:text-3xl font-serif font-bold mb-6">{h1.line1} {h1.line2}</h2>
             <p class="text-muted-foreground text-lg leading-relaxed mb-5">{introP1}</p>
             <p class="text-muted-foreground text-lg leading-relaxed">{introP2}</p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-serif font-bold mb-4">{deepDiveHeading}</h3>
+            <p class="text-muted-foreground text-base leading-relaxed">{serviceDeepDive}</p>
           </div>
 
           <div>

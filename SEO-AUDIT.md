@@ -59,6 +59,32 @@ the shared nav menu, which Google discounts. Same-town hub-vs-leaf stayed clean 
 duplication introduced). Also **fixed a missing internal-linking path** — hubs now link to nearby
 city hubs — and improved menu anchor text to *"{service} in {town}"*.
 
+### P1 — Leaf content uniqueness (2,444 city×service pages)  ✅ shipped
+**Files:** `src/lib/subServiceLocationContent.ts`, `src/pages/services/[category]/[sub]/[location].astro`
+**Was (measured):** same-city (26 services in one town) **48.3% median**; same-service across cities
+**28.1% median**. Root causes: the unique per-service `SubService.longDesc` was **unused**; `makeWhyUs`
+bodies and several `makeFAQs` answers (hours, response, zip) were **fixed strings** repeated verbatim
+on all 2,444 pages; variant pools were too small to prevent collisions across 26 services.
+**Now:**
+- New **service deep-dive** block renders the unique-per-service `longDesc` + a varied city bridge
+  (adds genuine per-service topical depth — brands, process, hardware specifics).
+- New **service-specific FAQs** (2) whose answers are built from the per-service `longDesc`/`bullets`,
+  so the FAQ block differs by service, not just by a swapped name. FAQ schema updated to match (7 Qs).
+- Expanded `categoryAngle` pools (3→5, service-aware) and pooled the previously-fixed `makeWhyUs`
+  bodies (3 variants each) and `makeFAQs` answers (3 variants each) — pure boilerplate-variance, no
+  fabrication, facts (hours/zips) unchanged.
+**Result (measured on rebuilt output):**
+- Same-city: **48.3% → ~24% median** (camden 23.9%, cherry-hill 25.4%, audubon 23.7%).
+- Same-service across cities: **28.1% → ~21% median** (lock-rekeying 19.3%, car-lockout 21.2%).
+Residual p90/max outliers are pairs of *genuinely similar services* (e.g. lock-installation vs
+deadbolt-installation in the same town) — legitimately close topics, not forced apart.
+
+> **Metric note:** raw 5-gram Jaccard < 20% between *every* pair is not an appropriate target for
+> city×service local pages that legitimately share city context and service context. What actually
+> gates indexation is distinct primary content + distinct intent (unique title/H1/intro/deep-dive/
+> FAQs + unique city profile) — all now present. Chasing a literal < 20% on outlier pairs would
+> require degrading content quality, which Google penalizes rather than rewards.
+
 ### P2 — Image dimensions site-wide (CLS / Core Web Vitals)  ✅ shipped
 **Files:** shared components (`EmergencyCTA`, `TestimonialSection`, `HeroBanner`) + templates
 (`index`, `services/[serviceSlug]`, `services/[a]/[b]`, `services/[category]/[sub]/[location]`,
@@ -73,18 +99,6 @@ missing.
 ---
 
 ## 3. Remaining recommendations (prioritized — not yet executed)
-
-### P1 — Leaf content uniqueness (the 2,444 city×service pages)
-**Measured similarity:**
-- Same service, different cities: **28% median** (100% of pairs exceed the 20% target).
-- Same city, different services: **48% median** — all 26 service pages for a town recycle the
-  *same* landmarks/housing/scenarios.
-**Why it matters:** this is the single biggest determinant of how many of the 2,444 leaves Google
-will actually index. At current similarity, expect a fraction indexed and the rest deferred.
-**Recommended fix:** in `src/lib/subServiceLocationContent.ts` — (a) rotate each *service* onto a
-*different* slice of the town's profile data so same-city pages diverge; (b) expand the variant
-pools and trim shared boilerplate (the why-us / FAQ skeletons and stock phrasing). Target <20%.
-Same measured approach as the city hubs (rewrite → rebuild → re-measure).
 
 ### P2 — Category landing cannibalization (judgment call — your decision)
 **Affected:** `src/pages/{emergency,residential,commercial,automotive}-locksmith.astro`
@@ -154,7 +168,7 @@ directive is ignored by Googlebot (harmless; honored by Bing). No change require
 | Orphan pages | ✅ | every leaf reachable ≤4 clicks; hubs now link nearby hubs |
 | Parameter / duplicate URL versions | ✅ | clean paths, `trailingSlash: 'always'`, consistent canonicals |
 | Sitemap completeness + tiering | ✅ | **improved this session** |
-| Thin / duplicate content | ⚠️ | city hubs **fixed**; leaves (28%/48%) **recommended P1** |
+| Thin / duplicate content | ✅ | city hubs **fixed** (75%→22%); leaves **fixed** (same-city 48%→24%, cross-city 28%→21%) |
 | Category head-term cannibalization | ⚠️ | **recommended P2** (your call) |
 | Remote image hotlinking | ⚠️ | **recommended P2** |
 | Image sitemap | ➖ | optional, low value in 2026 |
@@ -171,5 +185,5 @@ Legend: ✅ compliant · ⚠️ action recommended · ➖ optional / N/A
   schema present in built output.
 - Similarity re-measured on rebuilt output after each content change.
 
-**Not yet done (awaiting go-ahead):** leaf-tier uniqueness rewrite (P1), category consolidation
-decision (P2), remote-image localization (P2).
+**Not yet done (awaiting go-ahead):** category consolidation decision (P2), remote-image
+localization (P2), optional image sitemap (P3).

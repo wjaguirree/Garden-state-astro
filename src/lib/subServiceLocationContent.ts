@@ -263,26 +263,35 @@ export function categoryAngle(cat: ServiceCategory, sub: SubService, loc: Locati
   const note = noteFor(cat, loc);
   const cap = note.charAt(0).toUpperCase() + note.slice(1);
   const lm = pick(loc.profile.landmarks, seed);
+  const svc = sub.name.toLowerCase();
   const variants: Record<string, string[]> = {
     automotive: [
-      `For ${sub.name.toLowerCase()} specifically, that matters because ${note} — and our ${loc.name} auto trucks carry the transponder gear, key blanks, and programming tools to handle it on the first visit.`,
+      `For ${svc} specifically, that matters because ${note} — and our ${loc.name} auto trucks carry the transponder gear, key blanks, and programming tools to handle it on the first visit.`,
       `${cap}, which is why our ${loc.name} automotive techs arrive with the diagnostic equipment and key-cutting tools matched to the makes and models we actually see in this town — not a generic kit.`,
-      `When you need ${sub.name.toLowerCase()} in ${loc.name}, we're already familiar with the parking situation around ${lm} and the kinds of vehicles that fill it. ${cap}.`,
+      `When you need ${svc} in ${loc.name}, we're already familiar with the parking situation around ${lm} and the kinds of vehicles that fill it. ${cap}.`,
+      `${svc.charAt(0).toUpperCase() + svc.slice(1)} in ${loc.name} isn't a tow-and-pray job for us — ${note}, and we solve it curbside with the vehicle-specific tooling already on the truck.`,
+      `Because ${note}, a ${loc.name} ${svc} call is one we plan for the make, the model, and the block it's parked on before we even roll out.`,
     ],
     residential: [
-      `For ${sub.name.toLowerCase()}, that matters because ${note}. Our ${loc.name} residential techs treat your hardware like it belongs to a real home — not a builder spec sheet.`,
-      `${cap}, and ${sub.name.toLowerCase()} done correctly in ${loc.name} means starting with that reality, not ignoring it.`,
-      `That's especially true for ${sub.name.toLowerCase()} — ${note} — and we plan every ${loc.name} residential job around it before we ever knock on the door.`,
+      `For ${svc}, that matters because ${note}. Our ${loc.name} residential techs treat your hardware like it belongs to a real home — not a builder spec sheet.`,
+      `${cap}, and ${svc} done correctly in ${loc.name} means starting with that reality, not ignoring it.`,
+      `That's especially true for ${svc} — ${note} — and we plan every ${loc.name} residential job around it before we ever knock on the door.`,
+      `${svc.charAt(0).toUpperCase() + svc.slice(1)} in a ${loc.name} home is as much about the door as the lock: ${note}, so we check the frame and fit, not just the cylinder.`,
+      `Where ${note}, cutting corners on ${svc} shows up months later — so our ${loc.name} approach is measured, matched to the house, and done once.`,
     ],
     commercial: [
-      `For ${sub.name.toLowerCase()}, that matters because ${note}. We schedule ${loc.name} commercial work around your business hours, not ours.`,
-      `${cap}, and that shapes how we approach every ${loc.name} ${sub.name.toLowerCase()} job — fast, quiet, after-hours when needed, and documented for your records.`,
-      `${cap} — so ${sub.name.toLowerCase()} in ${loc.name} usually means working around staff schedules, deliveries, and customer foot traffic. We build that into the dispatch from the first call.`,
+      `For ${svc}, that matters because ${note}. We schedule ${loc.name} commercial work around your business hours, not ours.`,
+      `${cap}, and that shapes how we approach every ${loc.name} ${svc} job — fast, quiet, after-hours when needed, and documented for your records.`,
+      `${cap} — so ${svc} in ${loc.name} usually means working around staff schedules, deliveries, and customer foot traffic. We build that into the dispatch from the first call.`,
+      `A ${loc.name} ${svc} job affects staff, keys, and liability at once — and because ${note}, we document what changed and who holds access when we leave.`,
+      `${cap}, which is why we treat ${loc.name} ${svc} as a security decision, not just a hardware swap.`,
     ],
     emergency: [
-      `For ${sub.name.toLowerCase()}, that matters because ${note}. When you call us in an emergency, our ${loc.name} tech is already mentally prepared for the kind of door, frame, and lock they're about to see.`,
-      `${cap}, which is why ${sub.name.toLowerCase()} in ${loc.name} demands a tech who arrives ready — not one who has to drive back for the right tools.`,
+      `For ${svc}, that matters because ${note}. When you call us in an emergency, our ${loc.name} tech is already mentally prepared for the kind of door, frame, and lock they're about to see.`,
+      `${cap}, which is why ${svc} in ${loc.name} demands a tech who arrives ready — not one who has to drive back for the right tools.`,
       `In an emergency, the last thing you want is a locksmith who doesn't know your town. ${cap} — and we know it.`,
+      `An emergency ${svc} in ${loc.name} is a clock-management problem as much as a lock problem: ${note}, so we arrive stocked to finish in one stop.`,
+      `${svc.charAt(0).toUpperCase() + svc.slice(1)} can't wait, and ${note} — which is exactly why our ${loc.name} emergency response is built around first-visit resolution.`,
     ],
   };
   const pool = variants[cat.slug] ?? variants.residential;
@@ -327,11 +336,32 @@ export function makeWhyUs(cat: ServiceCategory, loc: Location, seed: number): Ar
   const titlePoolC = [`Built for ${loc.name}'s Housing`, `${loc.name} Hardware Expertise`, `Right Tools for ${loc.name}`, `Knows ${loc.name}'s Locks`];
   const titlePoolD = [`Non-Destructive Methods`, `No Damage to Your Door`, `Clean, Damage-Free Entry`, `Trim & Frame Stay Intact`];
 
+  const bodyA = [
+    `Our nearest tech is dispatched to ${loc.name} from a ${loc.county} staging point — usually 15 to 30 minutes to ${loc.zipCodes[0]} and the ${lm} area, six days a week including evenings, Sundays, and holidays (closed Saturdays).`,
+    `We stage mobile units around ${loc.county}, so a ${loc.name} call near ${lm} typically sees a tech in 15 to 30 minutes — the same window at 9 PM as at 9 AM, Sundays and holidays included.`,
+    `Because we work ${loc.name} constantly, dispatch already knows the fastest route to ${loc.zipCodes[0]}. Expect 15 to 30 minutes most of the time, six days a week (we're closed Saturdays).`,
+  ];
+  const bodyB = [
+    `Every ${loc.name} job is done by a New Jersey state-licensed locksmith — bonded, insured, and background-checked. You get a real receipt, a name, and a badge before any work starts.`,
+    `The person at your ${loc.name} door is a licensed, insured, background-checked NJ technician, not a subcontractor. Real credentials, a written receipt, and accountability come standard.`,
+    `We're NJ state-licensed, bonded, and insured, and every ${loc.name} tech is background-checked. No anonymous drivers, no cash-only surprises — just a credentialed locksmith and a receipt.`,
+  ];
+  const bodyC = [
+    `${loc.name}'s ${housing.toLowerCase()} aren't a generic suburban call. ${note.charAt(0).toUpperCase() + note.slice(1)} — so our trucks carry the matching hardware before we arrive.`,
+    `${note.charAt(0).toUpperCase() + note.slice(1)}. That's why we stock for ${loc.name}'s ${housing.toLowerCase()} specifically instead of hoping a generic kit fits.`,
+    `Knowing ${loc.name} means knowing its ${housing.toLowerCase()}: ${note}. We load the truck for that reality, not a one-size-fits-all suburban job.`,
+  ];
+  const bodyD = [
+    `We use professional picking, decoding, and bypass tools so ${loc.name} doors, frames, and trim stay intact. Forced entry is a last resort we rarely need.`,
+    `Damage-free is the default: on most ${loc.name} jobs we open, rekey, or repair without touching the door or frame. Drilling only happens when a lock leaves no other option.`,
+    `Our ${loc.name} techs work non-destructively — decoding and bypass first, so your hardware and trim survive the visit. Destructive entry is the exception, not the method.`,
+  ];
+
   return [
-    { icon: "clock", title: pick(titlePoolA, seed), body: `Our nearest tech is dispatched directly to ${loc.name} from a ${loc.county} staging point. Average arrival to ${loc.zipCodes[0]} and the area around ${lm} is 15 to 30 minutes — six days a week, including evenings, Sundays, and holidays (closed Saturdays).` },
-    { icon: "shield", title: pick(titlePoolB, seed + 1), body: `Every ${loc.name} job is performed by a New Jersey state-licensed locksmith who is fully bonded, insured, and background-checked. You get a real receipt, real accountability, and a name and badge before any work begins.` },
-    { icon: "star", title: pick(titlePoolC, seed + 2), body: `${loc.name}'s ${housing.toLowerCase()} need a different approach than a generic suburban call. ${note.charAt(0).toUpperCase() + note.slice(1)} — and our trucks carry the matching hardware before we even arrive.` },
-    { icon: "star", title: pick(titlePoolD, seed + 3), body: `We use professional-grade picking, decoding, and bypass tools so ${loc.name} doors, frames, and historic trim stay intact. Forced entry is a last resort — and on most ${loc.name} jobs we never need it at all.` },
+    { icon: "clock", title: pick(titlePoolA, seed), body: pick(bodyA, seed + 41) },
+    { icon: "shield", title: pick(titlePoolB, seed + 1), body: pick(bodyB, seed + 43) },
+    { icon: "star", title: pick(titlePoolC, seed + 2), body: pick(bodyC, seed + 47) },
+    { icon: "star", title: pick(titlePoolD, seed + 3), body: pick(bodyD, seed + 53) },
   ];
 }
 
@@ -345,12 +375,43 @@ export function makeFAQs(sub: SubService, cat: ServiceCategory, loc: Location, s
     ? `including ${loc.profile.neighborhoods.slice(0, 3).join(", ")}`
     : `across all ${loc.zipCodes.length > 1 ? "zip codes" : "of " + loc.zipCodes[0]}`;
 
+  const aFast = pick([
+    `Our average response to ${loc.name} is 15 to 30 minutes from the time you call. Mobile units stage across ${loc.county}, so wherever you are — near ${lm}, near ${lm2}, or anywhere between — the closest NJ-licensed tech heads your way immediately.`,
+    `Most ${loc.name} calls see a tech in 15 to 30 minutes. Because we keep vans positioned around ${loc.county}, response near ${lm} is the same whether you call at noon or 9 PM.`,
+    `Plan on 15 to 30 minutes for ${loc.name}. We don't route through a distant call center — the nearest available ${loc.county} tech is dispatched straight to you, from ${lm} to ${lm2}.`,
+  ], seed + 61);
+
+  const aLocal = pick([
+    `Garden State Locksmith is a real local NJ company, not a national booking service. We work in ${loc.name} every week, we know it's ${loc.profile.vibe.replace(/^a /, "a ")}, and we know the hardware that's typical here — ${note}.`,
+    `We're local, and it shows on the job: ${loc.name} is ${loc.profile.vibe.replace(/^a /, "a ")}, and ${note}. A call-center dispatcher three states away can't tell you that.`,
+    `A real one. ${loc.name} is ${loc.profile.vibe.replace(/^a /, "a ")}, and because ${note}, knowing the town is half of doing the job right.`,
+  ], seed + 63);
+
+  const aHousing = pick([
+    `Yes — that's exactly the kind of ${loc.name} work we specialize in. ${housing.charAt(0).toUpperCase() + housing.slice(1)} are common here, and our trucks carry the matching hardware, so we usually rekey, repair, or replace on the same visit. We've handled jobs like ${scenario} many times.`,
+    `Absolutely. ${housing.charAt(0).toUpperCase() + housing.slice(1)} show up all over ${loc.name}, and we stock for them — a job like ${scenario} is routine for us, and it's typically a one-visit fix.`,
+    `We do it constantly. ${housing.charAt(0).toUpperCase() + housing.slice(1)} are part of ${loc.name}'s character, and we've learned their quirks on jobs like ${scenario}. The right hardware is already on the truck.`,
+  ], seed + 65);
+
+  const aZip = pick([
+    `We serve every ${loc.name} address — zip code${loc.zipCodes.length > 1 ? "s" : ""} ${loc.zipCodes.join(", ")}, ${hoodLine} — plus the surrounding ${loc.county} towns. Not sure you're in range? Call (856) 588-0580 and we'll confirm in seconds.`,
+    `All of ${loc.name}: ${loc.zipCodes.join(", ")}, ${hoodLine}, and the neighboring ${loc.county} communities. If your street isn't obvious, a quick call to (856) 588-0580 settles it.`,
+    `Every part of ${loc.name} — ${hoodLine} — across ${loc.zipCodes.length > 1 ? "zip codes" : "zip code"} ${loc.zipCodes.join(", ")}, plus the rest of ${loc.county}. We'll confirm your exact address on the phone.`,
+  ], seed + 67);
+
+  const hoursFact = `7 AM – 10 PM Monday through Thursday and Sunday, 7 AM – 6 PM Friday, closed Saturdays`;
+  const aHours = pick([
+    `We answer ${loc.name} calls ${hoursFact} — holidays and Sundays included. Every job is handled by a real NJ-licensed technician, whether the call comes at 8 AM or 9 PM.`,
+    `${loc.name} hours are ${hoursFact}. Sundays and holidays are covered, and it's always a licensed NJ tech on the job — never an after-hours answering service.`,
+    `Our ${loc.name} coverage runs ${hoursFact}, holidays included. Same licensed technicians, same fast response, morning or night.`,
+  ], seed + 69);
+
   return [
-    { q: `How fast can a locksmith get to ${loc.name}, NJ?`, a: `Our average response to ${loc.name} is 15 to 30 minutes from the time you call. We keep mobile units staged across ${loc.county}, so wherever you are in ${loc.name} — near ${lm}, near ${lm2}, or anywhere else — the closest available NJ-licensed tech is dispatched immediately.` },
-    { q: `Do you actually know ${loc.name}, or are you a national call center?`, a: `Garden State Locksmith is a real local NJ company. We work in ${loc.name} every week. We know it's ${loc.profile.vibe.replace(/^a /, "a ")}, and we know what kind of locks are typical here — ${note}.` },
-    { q: `Can you handle ${housing.toLowerCase()} in ${loc.name}?`, a: `Yes — that's exactly the kind of ${loc.name} work we specialize in. ${housing.charAt(0).toUpperCase() + housing.slice(1)} are very common in ${loc.name}, and our trucks carry the matching hardware so we can usually rekey, repair, or replace on the same visit. We've seen jobs like ${scenario} many times in ${loc.name}.` },
-    { q: `What ${loc.name} zip codes and neighborhoods do you serve?`, a: `We serve every ${loc.name} address — zip code${loc.zipCodes.length > 1 ? "s" : ""} ${loc.zipCodes.join(", ")}, ${hoodLine}. We also cover the surrounding ${loc.county} towns. If you're not sure whether your address is in our ${loc.name} service zone, just call (856) 588-0580 and we'll confirm in seconds.` },
-    { q: `What are your hours in ${loc.name}?`, a: `Garden State Locksmith answers ${loc.name} calls 7 AM – 10 PM Monday through Thursday and Sunday, 7 AM – 6 PM on Friday, and we're closed Saturdays. Holidays and Sundays are covered. Every job is handled by a real NJ-licensed technician. ${loc.profile.archetype === "transit-hub" || loc.profile.archetype === "urban-revitalizing" || loc.profile.archetype === "urban-capital" ? `${loc.name}'s daily activity is exactly why we keep ${loc.name} fully staffed throughout business hours.` : `Whether the call comes at 8 AM or 9 PM, ${loc.name} gets the same fast response.`}` },
+    { q: `How fast can a locksmith get to ${loc.name}, NJ?`, a: aFast },
+    { q: `Do you actually know ${loc.name}, or are you a national call center?`, a: aLocal },
+    { q: `Can you handle ${housing.toLowerCase()} in ${loc.name}?`, a: aHousing },
+    { q: `What ${loc.name} zip codes and neighborhoods do you serve?`, a: aZip },
+    { q: `What are your hours in ${loc.name}?`, a: aHours },
   ];
 }
 
@@ -371,4 +432,66 @@ export function aboutHeading(loc: Location, seed: number): string {
 export function nearbyHeading(loc: Location, sub: SubService, seed: number): string {
   const variants = [`${sub.name} in Towns Near ${loc.name}`, `Also Covering Near ${loc.name}`, `Other ${loc.county} Towns We Serve`, `${sub.name} Across ${loc.county}`];
   return pick(variants, seed);
+}
+
+// ── Service-specific content ────────────────────────────────────────────────
+// These pull from SubService.longDesc / .bullets — data that is unique per
+// SERVICE (and identical across towns). Rendering it is what makes two
+// different services in the SAME town diverge, which was the dominant
+// same-city duplication source. The city bridge sentence keeps it from reading
+// like a generic all-NJ blurb.
+
+export function serviceDeepDiveHeading(sub: SubService, loc: Location, seed: number): string {
+  const variants = [
+    `How ${sub.name} in ${loc.name} Works`,
+    `What ${sub.name} Actually Involves`,
+    `Our ${sub.name} Process in ${loc.name}`,
+    `${sub.name}, Step by Step`,
+  ];
+  return pick(variants, seed + 23);
+}
+
+export function makeServiceDeepDive(sub: SubService, cat: ServiceCategory, loc: Location, seed: number): string {
+  const note = noteFor(cat, loc);
+  const svc = sub.name.toLowerCase();
+  const bridges = [
+    `In ${loc.name}, that same process runs up against one local reality: ${note} — so we adapt it to the property in front of us rather than working from a script.`,
+    `For ${loc.name} specifically, ${note}, which is why we walk the door and the hardware before we quote a ${svc}.`,
+    `Around ${loc.name}, ${note}. That's the difference between a ${svc} that holds up and one you're calling about again next season.`,
+    `${loc.name} is no exception — ${note}, and our local techs plan the ${svc} around exactly that before they arrive.`,
+  ];
+  return `${sub.longDesc} ${pick(bridges, seed + 29)}`;
+}
+
+// Two service-specific FAQ entries whose ANSWERS are built from the unique
+// per-service longDesc/bullets, so the FAQ block differs meaningfully between
+// services in the same town (not just a swapped service name).
+export function makeServiceFAQs(sub: SubService, cat: ServiceCategory, loc: Location, seed: number): Array<{ q: string; a: string }> {
+  const svc = sub.name.toLowerCase();
+  const firstBullet = sub.bullets[0] ?? "";
+  const secondBullet = sub.bullets[1] ?? sub.bullets[0] ?? "";
+
+  const q1 = pick([
+    `What does a ${svc} in ${loc.name} actually involve?`,
+    `How does ${svc} work when you come out to ${loc.name}?`,
+    `What should I expect from a ${loc.name} ${svc} call?`,
+    `Walk me through a ${svc} in ${loc.name} — what happens?`,
+  ], seed + 31);
+  const a1 = `${sub.longDesc} For a ${loc.name} job, that means ${firstBullet.charAt(0).toLowerCase() + firstBullet.slice(1)} and ${secondBullet.charAt(0).toLowerCase() + secondBullet.slice(1)}.`;
+
+  const q2 = pick([
+    `Will a ${svc} damage my ${cat.slug === "automotive" ? "vehicle" : "door or hardware"}?`,
+    `Is ${svc} in ${loc.name} done in one visit?`,
+    `Do you carry the right parts for ${svc} on the truck?`,
+    `What makes your ${loc.name} ${svc} different from a national chain?`,
+  ], seed + 37);
+  const thirdBullet = sub.bullets[2] ?? sub.bullets[0] ?? "";
+  const a2 = pick([
+    `${sub.shortDesc} Because we handle ${svc} constantly, our ${loc.name} truck already carries what the job needs — ${thirdBullet.charAt(0).toLowerCase() + thirdBullet.slice(1)} — so most calls wrap up on the first visit.`,
+    `${sub.shortDesc} A ${loc.name} tech arrives ready for ${svc} — ${firstBullet.charAt(0).toLowerCase() + firstBullet.slice(1)} — and quotes you before any work begins, so there are no surprise charges.`,
+    `Rarely. ${sub.shortDesc} We favor non-destructive methods, and every ${loc.name} ${svc} is priced up front — ${thirdBullet.charAt(0).toLowerCase() + thirdBullet.slice(1)}.`,
+    `${sub.shortDesc} What sets our ${loc.name} ${svc} apart is that a licensed local tech does it start to finish — ${secondBullet.charAt(0).toLowerCase() + secondBullet.slice(1)} — not a rotating cast of subcontractors.`,
+  ], seed + 39);
+
+  return [{ q: q1, a: a1 }, { q: q2, a: a2 }];
 }
