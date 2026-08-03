@@ -2,6 +2,18 @@
 /locations/springfield-township-burlington/ /locations/springfield-township/ 301
 /locations/springfield-township-burlington /locations/springfield-township/ 301
 
+# ── Standalone service landing pages consolidated into the category hubs ────
+# /{x}-locksmith/ duplicated /services/{category}/ (same service, same keyword).
+# The category hub is the canonical page (breadcrumb parent of ~700 child pages).
+/residential-locksmith/ /services/residential/ 301
+/residential-locksmith /services/residential/ 301
+/commercial-locksmith/ /services/commercial/ 301
+/commercial-locksmith /services/commercial/ 301
+/automotive-locksmith/ /services/automotive/ 301
+/automotive-locksmith /services/automotive/ 301
+/emergency-locksmith/ /services/emergency/ 301
+/emergency-locksmith /services/emergency/ 301
+
 # ── Flat service pages consolidated into category sub-services ──────────────
 # These duplicated the /services/{category}/{sub}/ pages (same search intent,
 # roughly half the content), so Google indexed only one of each pair. Removing
