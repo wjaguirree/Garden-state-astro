@@ -295,7 +295,7 @@ export const categories: ServiceCategory[] = [
         slug: "commercial-lock-change",
         name: "Commercial Lock Change",
         shortDesc: "Full commercial lock change and rekeying — all hardware replaced in one visit.",
-        longDesc: "After an employee departure, a security breach, or a facility upgrade, a complete commercial lock change restores control over who can access your property. Garden State Locksmith replaces commercial-grade deadbolts, cylindrical knob sets, lever sets, and mortise hardware for offices, retail stores, warehouses, and multi-tenant buildings. We carry grade-1 commercial hardware in stock for immediate same-day installation.",
+        longDesc: "When an employee leaves with a key, a break-in exposes a weak point, or a facility upgrades, changing the locks restores control over who gets in. For a business we'll usually first ask whether you need a full change or just a rekey — but a change is the right call when hardware is worn, mismatched, or you're standardizing a building. We fit ANSI Grade 1 commercial cylindrical lever sets, mortise locks, and deadbolts built for high-cycle use, plus narrow-stile deadlatches for aluminum-and-glass storefronts. Where it fits your operation we'll move you to a small-format interchangeable core (SFIC) system, so future changes take seconds — you swap the core with a control key instead of pulling the whole lock. Work is documented and scheduled around your hours, and grade-1 stock on the truck means most jobs finish same-day.",
         bullets: [
           "ANSI Grade 1 commercial hardware stocked and installed",
           "All entry points addressed in single visit",
@@ -313,7 +313,7 @@ export const categories: ServiceCategory[] = [
         slug: "master-key-systems",
         name: "Master Key Systems",
         shortDesc: "One key opens everything — individual keys stay limited.",
-        longDesc: "A master key system lets you simplify facility management without sacrificing security. With a properly designed system, a building manager's master key opens every door, department heads access their sections only, and individual employees access only their designated spaces. Garden State Locksmith designs, installs, and manages master key systems for offices, apartments, hotels, schools, and multi-unit properties throughout New Jersey.",
+        longDesc: "A master key system gives one key controlled access to many doors while each lower-level key opens only what it should — a change key for one office, a sub-master for a department, a grand master for the whole building. Done right it's convenient; done carelessly it's a liability. We design the hierarchy on paper first and build a proper bitting schedule so the pinning stays secure and doesn't accidentally create \"ghost keys\" that open doors they shouldn't. We pin master wafers into your existing or new cylinders, label and register every level, and strongly recommend a restricted, patent-protected keyway so no one can walk into a hardware store and copy a master. We also plan for growth, leaving room to add doors later without re-pinning the whole system, and keep your keying chart on file so future changes are fast and traceable — for offices, apartments, hotels, schools, and multi-tenant buildings.",
         bullets: [
           "Custom system design for your facility",
           "Hierarchical access levels — GMK, MK, Change Key",
@@ -331,7 +331,7 @@ export const categories: ServiceCategory[] = [
         slug: "access-control-systems",
         name: "Access Control Systems",
         shortDesc: "Electronic access — delete credentials in seconds, audit who enters when.",
-        longDesc: "Access control systems replace physical keys with electronic credentials — PIN codes, key cards, fobs, or smartphone apps. They let you instantly add or remove users, set time-based access schedules, and pull detailed entry logs. Garden State Locksmith installs and programs commercial access control systems from simple single-door keypads to enterprise-grade multi-door networked systems for any size business in New Jersey.",
+        longDesc: "Access control replaces keys with credentials you can revoke in seconds — PIN codes, cards, fobs, or a phone. Lose a key and you're rekeying; lose a fob and you just delete it. The hardware choices matter for both security and life safety, and we walk you through them. For credentials we steer clients off legacy 125 kHz prox cards (trivially cloned) toward encrypted 13.56 MHz smart cards or mobile Bluetooth. For the door, an electric strike works with most latching hardware and stays locked in a power loss, while a maglock holds 1,200+ lbs but must be tied into the fire alarm and a request-to-exit and release on power failure — that's code, not optional. We install everything from a single standalone keypad to cloud-managed, multi-door networked systems with scheduling and audit logs, integrate it with your existing doors and exit devices, and set up the admin so your team can manage users without us.",
         bullets: [
           "Keypad, card reader, fob, and mobile credential options",
           "Instant credential revocation without rekeying",
@@ -349,7 +349,7 @@ export const categories: ServiceCategory[] = [
         slug: "high-security-locks",
         name: "High-Security Locks",
         shortDesc: "Real protection from picks, drills, and unauthorized key copies.",
-        longDesc: "Standard commercial locks can be picked in seconds and their keys easily duplicated. High-security locks — Medeco, Mul-T-Lock, ASSA ABLOY, and Abloy — are engineered to resist all common attack methods: picking, bumping, drilling, and unauthorized key copying. Garden State Locksmith supplies and installs certified high-security hardware for businesses, government facilities, and high-value residential properties across New Jersey.",
+        longDesc: "Two things make a lock \"high-security,\" and most hardware has neither. The first is a UL 437 / ANSI 156.30-rated body that physically resists picking, bumping, and drilling — hardened steel inserts, anti-drill ball bearings, and sidebar or telescoping-pin mechanisms that ordinary picks can't manipulate. The second, and the one people underrate, is key control: patented, restricted keyways where blanks are legally protected and a duplicate can only be cut against a signature card on file, so a departing employee or contractor can't quietly copy your key. We supply and install Medeco, Mul-T-Lock, ASSA, and Abloy across both — and can build them into a master-key or SFIC system so one high-security platform covers a whole facility. This is the right upgrade for exterior doors, IT and server rooms, pharmacies, cash areas, and any door where a copied key would be a real problem; we'll tell you where it's worth the cost and where a standard grade-1 lock is plenty.",
         bullets: [
           "UL-certified pick, bump, and drill resistance",
           "Patent-protected restricted keys — no unauthorized copies",
@@ -367,7 +367,7 @@ export const categories: ServiceCategory[] = [
         slug: "panic-bar-installation",
         name: "Panic Bar Installation",
         shortDesc: "Code-compliant panic hardware for emergency exits.",
-        longDesc: "Building and fire codes in New Jersey require panic hardware (also called crash bars or exit devices) on certain commercial doors. Garden State Locksmith supplies and installs rim-mount, mortise, and vertical rod panic bars for single and double doors. All installations meet IBC and NFPA 101 Life Safety Code requirements. We also repair and maintain existing panic hardware for annual code compliance.",
+        longDesc: "Panic hardware — crash bars, or \"exit devices\" — exists so anyone can get out of a building in an emergency with a single push, no key, knob, or special knowledge required. In New Jersey that's a code requirement, not a preference, on assembly and high-occupancy doors under the IBC and NFPA 101 Life Safety Code, and inspectors do check it. We supply and install the right type for the door: rim devices for most single doors, mortise exit locks, and surface or concealed vertical-rod (CVR) devices for pairs of doors. We can pair a device with electric latch retraction so it ties into access control, or an exit alarm for controlled doors, and set up delayed egress only where code allows it. A critical detail we get right: on a fire-rated door the latch cannot be \"dogged\" (held open) — it must positively latch. We also service, adjust, and re-certify existing panic hardware so you pass annual inspection.",
         bullets: [
           "IBC and NFPA 101 code-compliant installation",
           "Rim-mount, mortise, and vertical rod devices",
@@ -385,7 +385,7 @@ export const categories: ServiceCategory[] = [
         slug: "safe-opening",
         name: "Safe Opening",
         shortDesc: "Lost your combination or locked out of your safe? We open it.",
-        longDesc: "Whether your safe's combination is lost, the dial is malfunctioning, the battery died on an electronic model, or the lock simply failed — Garden State Locksmith technicians are trained in professional safe opening techniques. We open combination dial safes, electronic safes, depository safes, fireproof document safes, and wall safes with minimal or no damage. After opening, we service or replace the lock and restore full function.",
+        longDesc: "A locked safe you can't open is stressful — and it's exactly where DIY does real damage. We work least-destructive first: manipulation (dialing open a combination lock by feel), scoping, or an autodialer that tries combinations on an electronic lock. When drilling is required it isn't random force — we drill a precise, pre-planned hole to view or bypass the lock package, then repair the hole and restore the safe to full use. The reason to call a pro is what most people don't see: quality safes have hardened plates, and relockers and glass relock triggers that permanently freeze the bolt work if the lock is attacked carelessly, turning a simple opening into a cutting job. We open dial and electronic safes, depository and drop safes, fireproof document safes, gun safes, and wall and floor safes, then service or replace the lock and reset your combination. We do require proof of ownership before opening.",
         bullets: [
           "Combination, electronic, and key-operated safes",
           "Minimal to no damage — preserve your safe's value",
@@ -403,7 +403,7 @@ export const categories: ServiceCategory[] = [
         slug: "safe-installation",
         name: "Safe Installation",
         shortDesc: "Proper safe anchoring so it cannot be carried off.",
-        longDesc: "An unbolted safe can be carried away in minutes — making it useless. Garden State Locksmith supplies and professionally anchors safes into concrete or wood sub-floors and walls. We carry a selection of residential and commercial safes including fireproof document safes, gun safes, wall safes, and heavy-duty commercial floor safes. Proper installation means your safe stays where it belongs no matter what.",
+        longDesc: "A safe that isn't anchored is a portable safe — burglars simply carry the whole thing out and open it later, which is how most \"safe\" losses actually happen. Proper installation fixes that. On a concrete slab we bolt through the pre-drilled anchor holes with sleeve or wedge anchors; on a wood subfloor we lag into the joists, not just the plywood. We help you match the safe to the threat, too: a UL fire rating (for documents and media) is a different spec from a burglary rating like RSC or TL-15/TL-30, and a lot of big-box \"fire safes\" offer little burglary resistance. We place it out of sight and away from the obvious first-look spots, keep egress and door swing in mind, and handle the weight safely. We install fireproof document safes, gun safes, wall safes, and heavy commercial floor and drop safes — then set your combination and show you how to change it.",
         bullets: [
           "Concrete and wood floor anchoring",
           "Wall safe installation and concealment",
