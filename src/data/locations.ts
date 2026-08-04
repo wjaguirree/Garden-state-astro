@@ -899,23 +899,25 @@ export const locations: Location[] = [
   {
     slug: "woodlynne", name: "Woodlynne", county: "Camden County", state: "NJ", zipCodes: ["08107"],
     nearbyLocations: ["collingswood", "camden", "oaklyn"], population: "2,900",
-    description: "A small, densely populated borough bordering Camden.",
+    description: "New Jersey's densest small borough — packed twins and rowhouses on a former amusement-park site.",
     profile: {
       archetype: "dense-urban",
-      vibe: "a tiny but densely populated borough wedged between Camden and Collingswood — an immigrant-rich community with closely packed late-19th-century twins and rowhouses",
+      vibe: "a 0.22-square-mile borough between Camden and Collingswood that is the most densely populated town in Camden County — incorporated in 1901 on the former Woodlynne Amusement Park grounds, now tightly packed late-1800s twins and rowhouses",
       housingStock: ["late-1800s brick rowhouses", "Victorian-era twins", "small multi-family conversions", "older 1920s singles"],
-      landmarks: ["the dense central residential blocks", "the borough's compact downtown corner", "neighboring Collingswood and Camden commercial strips"],
-      neighborhoods: ["the central rowhouse blocks"],
+      landmarks: ["the Woodlynne war memorial on Woodlynne Avenue", "Woodlynne Elementary School", "the former Woodlynne Amusement Park grounds the borough sits on", "Route 168 and Route 130 along the borough's edges"],
+      neighborhoods: ["the Woodlynne Avenue blocks", "the dense central rowhouse grid", "the Collingswood-line streets"],
       serviceNotes: {
-        auto: "tight on-street parking and high density mean residential car-lockouts are the norm",
+        auto: "tight on-street parking and county-leading density mean residential car-lockouts are the norm here",
         residential: "Woodlynne's century-old rowhouses commonly retain original mortise locks needing skilled, non-destructive service",
-        commercial: "the few small businesses here need durable commercial deadbolts that handle constant cycling",
-        emergency: "shared entries between adjacent rowhouses mean a single broken key can lock multiple families out"
+        commercial: "small businesses near Route 130 need durable commercial deadbolts that handle constant cycling",
+        emergency: "shared entries between adjacent twins mean a single broken key can lock multiple families out"
       },
       commonScenarios: [
-        "a tenant locked out of a rowhouse on a Sunday evening",
-        "a 1890s twin with a snapped key in an original mortise lock",
-        "a corner shop needing an emergency lock repair"
+        "a tenant locked out of a Woodlynne Avenue rowhouse on a Sunday evening",
+        "an 1890s twin with a snapped key in an original mortise lock",
+        "a corner shop near Route 130 needing an emergency lock repair",
+        "a dense-block resident with no off-street parking locked out of the car",
+        "a multi-family conversion needing a full rekey between tenants"
       ]
     }
   },
@@ -1476,23 +1478,25 @@ export const locations: Location[] = [
   {
     slug: "springfield-township", name: "Springfield", county: "Burlington County", state: "NJ", zipCodes: ["08086"],
     nearbyLocations: ["westampton", "mount-holly", "hainesport"], population: "3,200",
-    description: "A quiet agricultural township in Burlington County.",
+    description: "A large historic Burlington County farm township of Jobstown, Jacksonville, and Arneys Mount.",
     profile: {
       archetype: "agricultural-rural",
-      vibe: "a quiet agricultural township of working farms, large rural parcels, and a small handful of crossroads communities",
-      housingStock: ["working-farm homesteads", "rural single-families on large parcels", "older farmhouses", "modular homes on wooded lots"],
-      landmarks: ["the township's working farms", "Smithville Park nearby", "the rural crossroads"],
-      neighborhoods: ["the township's farming hamlets"],
+      vibe: "a nearly 30-square-mile Burlington County farm township first formed in 1688, spread across the hamlets of Jobstown, Juliustown, Jacksonville and Arneys Mount, with Route 206, Route 68 and the Turnpike threading through the fields",
+      housingStock: ["working-farm homesteads", "18th- and 19th-century farmhouses near Arneys Mount", "rural single-families on large parcels", "modular homes on wooded lots"],
+      landmarks: ["the Old Upper Springfield Friends Burying Ground (on the National Register)", "the Burlington County Fairgrounds", "historic Arneys Mount", "the Route 206 and Route 68 farm corridors", "the Jobstown and Jacksonville crossroads"],
+      neighborhoods: ["Jobstown", "Jacksonville", "Arneys Mount", "the Route 206 corridor"],
       serviceNotes: {
-        auto: "long unlit roads mean fast mobile response is essential for after-dark lockouts",
-        residential: "rural farmhouses commonly have detached barns, sheds, and outbuildings with locks that need rekeying",
-        commercial: "the few small businesses need durable, weather-resistant commercial hardware",
-        emergency: "farm-area calls require techs equipped for outbuilding and equipment-lock work"
+        auto: "long unlit county roads like 537 and 545 make fast after-dark mobile response essential",
+        residential: "the township's 18th- and 19th-century farmhouses often have detached barns and original hardware that need careful rekeying",
+        commercial: "farm-supply businesses and the county fairgrounds need durable, weather-tolerant commercial locks",
+        emergency: "with parcels spread across 30 square miles, our techs stage to reach any hamlet quickly"
       },
       commonScenarios: [
-        "a farmer locked out of a barn or equipment shed",
-        "a rural farmhouse with a corroded original deadbolt",
-        "a long-distance after-dark residential lockout"
+        "a farmer locked out of a barn off Route 206",
+        "a historic Jacksonville farmhouse with a seized original deadbolt",
+        "an after-dark lockout on a long Jobstown driveway",
+        "a fairgrounds vendor needing an emergency lock repair",
+        "an Arneys Mount homeowner rekeying a 19th-century front door"
       ]
     }
   },
@@ -2126,23 +2130,25 @@ export const locations: Location[] = [
   {
     slug: "oldmans-township", name: "Oldmans Township", county: "Salem County", state: "NJ", zipCodes: ["08066"],
     nearbyLocations: ["swedesboro", "pennsville", "logan-township"], population: "2,100",
-    description: "A rural Salem County township along the Delaware River.",
+    description: "A 20-square-mile rural Salem County township on the Delaware River, home to Pedricktown and Auburn.",
     profile: {
       archetype: "agricultural-rural",
-      vibe: "a tiny rural Delaware River township of working farms, large rural parcels, and a handful of crossroads communities",
-      housingStock: ["working-farm homesteads", "rural single-families on large parcels", "older farmhouses"],
-      landmarks: ["the township's working farms", "the Delaware riverfront", "the rural crossroads"],
-      neighborhoods: ["the township's farming hamlets"],
+      vibe: "a 20-square-mile Delaware River township incorporated in 1881 from old Upper Penns Neck — working farms and large parcels stitched together by the hamlets of Pedricktown, Auburn, Parkertown and Perkintown, with I-295, Route 130 and the Turnpike cutting across",
+      housingStock: ["working-farm homesteads", "rural single-families on large parcels", "older farmhouses in Pedricktown and Auburn", "scattered homes along Oldmans Creek"],
+      landmarks: ["the Spitfire Aerodrome grass airfield", "the Delaware riverfront and Oldmans Creek", "the I-295 Exit 7 corridor", "the Clara Barton and John Fenwick Turnpike service areas", "the Pedricktown and Auburn crossroads"],
+      neighborhoods: ["Pedricktown", "Auburn", "the Oldmans Creek farmland"],
       serviceNotes: {
-        auto: "long unlit roads mean fast mobile response is essential after dark",
-        residential: "rural farmhouses commonly have detached barns, sheds, and outbuildings needing rekeying",
-        commercial: "the few small businesses need durable, weather-resistant commercial hardware",
-        emergency: "farm-area calls require techs equipped for outbuilding and equipment-lock work"
+        auto: "long unlit farm roads and the I-295/Turnpike ramps mean fast mobile response matters after dark",
+        residential: "farmhouses across Pedricktown and Auburn commonly have detached barns, sheds, and outbuildings needing rekeying",
+        commercial: "warehouses near the Turnpike and small businesses need durable, weather-resistant commercial hardware",
+        emergency: "spread-out parcels mean a long-driveway farmhouse lockout can sit a mile from the nearest neighbor"
       },
       commonScenarios: [
-        "a farmer locked out of a barn or equipment shed",
-        "a rural farmhouse with a corroded original deadbolt",
-        "a long-distance after-dark residential lockout"
+        "a farmer locked out of a barn or equipment shed off Route 130",
+        "a Pedricktown farmhouse with a corroded original deadbolt",
+        "an after-dark lockout on a long Auburn-area driveway",
+        "a Turnpike-corridor warehouse needing a commercial lock change",
+        "a small-plane owner locked out at the Spitfire Aerodrome"
       ]
     }
   },
