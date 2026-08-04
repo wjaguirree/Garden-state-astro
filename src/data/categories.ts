@@ -157,7 +157,7 @@ export const categories: ServiceCategory[] = [
         slug: "lock-installation",
         name: "Lock Installation",
         shortDesc: "Professional deadbolt and security hardware installation.",
-        longDesc: "Installing a new lock correctly is the foundation of home security. A misaligned bolt, shallow strike plate, or improperly seated cylinder can leave your door vulnerable even with expensive hardware. Garden State Locksmith technicians install all lock types — deadbolts, knob locks, lever sets, mortise locks, and smart locks — with perfect alignment and solid anchoring into your door frame.",
+        longDesc: "The best lock in the world is only as good as its installation — a shallow strike, a bolt that doesn't fully seat, or a mismatched backset leaves an expensive deadbolt easy to defeat. We start by measuring the backset (2-3/8\" or 2-3/4\") and door thickness so the new hardware actually fits, then bore a clean 2-1/8\" cross-bore and 1\" edge-bore where a door needs it. On install we set a full 1-inch bolt throw, mortise the strike flush, and anchor it with long screws into the framing rather than the soft jamb. We fit knob and lever sets, deadbolts, mortise locks, and smart locks, and match new hardware to the door's ANSI grade and finish. A typical door takes 30 to 45 minutes and leaves you with a lock that closes cleanly and locks without lifting or pulling the door.",
         bullets: [
           "All lock types and brands installed",
           "Deadbolts, knob sets, lever sets, mortise locks",
@@ -175,7 +175,7 @@ export const categories: ServiceCategory[] = [
         slug: "lock-rekeying",
         name: "Lock Rekeying",
         shortDesc: "New keys, same locks — make all old keys useless instantly.",
-        longDesc: "Rekeying is the fastest and most affordable way to change who has access to your home. When we rekey a lock, we alter the internal pin configuration so that all previous keys — including those you may have lost — no longer work. You get brand new keys, and your existing hardware stays in place. Perfect for new homeowners, after a breakup, or when a key goes missing.",
+        longDesc: "Rekeying changes which key opens a lock without replacing the lock itself. We remove the cylinder, drop in a new set of bottom pins matched to a fresh key, and every old key — including any you lost or handed to a past tenant, contractor, or ex — stops working immediately. It's a fraction of the cost of new hardware and takes only a few minutes per cylinder. The real advantage most people miss: we can key several different locks to a single key, so your front, back, and garage doors all open with one key instead of a crowded ring. It's the first thing we recommend after a closing, a breakup, a lost key, or a rental turnover. If a cylinder is worn or damaged, we'll tell you when a rekey won't hold and a replacement is the better call.",
         bullets: [
           "All old keys immediately made useless",
           "Fraction of the cost of full lock replacement",
@@ -193,7 +193,7 @@ export const categories: ServiceCategory[] = [
         slug: "lock-repair",
         name: "Lock Repair",
         shortDesc: "Fix what's broken — often cheaper than replacing.",
-        longDesc: "Not every lock problem requires a full replacement. Our technicians diagnose and repair a wide range of residential lock issues — sticking or sticky mechanisms, loose or wobbly hardware, keys that don't turn smoothly, locks that don't latch properly, and worn-out internal components. Repairing is almost always faster and cheaper than replacing, and we carry parts for most major lock brands.",
+        longDesc: "Not every lock problem needs a new lock. Most residential complaints — a knob that's gone loose, a key that has to be jiggled, a deadbolt that scrapes or won't latch — come from ordinary wear or a house that has settled: backed-out set screws, a strike that no longer lines up with the bolt, or dried grease inside the cylinder. We diagnose the actual cause rather than forcing it, then tighten and re-seat the hardware, realign or shim the strike, and clean and re-lubricate the cylinder with a dry PTFE or graphite lube (never WD-40, which gums up over time). Worn springs, tailpieces, and tumblers are swapped from parts we carry for Schlage, Kwikset, Baldwin, and other common brands. Repairing is usually faster and cheaper than replacing — and we'll be honest when a lock is worn past the point of a worthwhile fix.",
         bullets: [
           "Sticking, jammed, and worn lock repair",
           "Loose hardware tightened and realigned",
@@ -211,7 +211,7 @@ export const categories: ServiceCategory[] = [
         slug: "smart-lock-installation",
         name: "Smart Lock Installation",
         shortDesc: "Upgrade to keyless entry — convenient, connected, secure.",
-        longDesc: "Smart locks give you the freedom to lock and unlock your door from anywhere, share access codes with family or guests, and track who enters and when. Garden State Locksmith installs and configures all major smart lock brands — August, Schlage Encode, Yale Assure, Kwikset Halo, and more. We handle the hardware installation, app setup, and integration with your smart home system.",
+        longDesc: "Smart locks let you lock up from your phone, hand out time-limited codes instead of keys, and see who came and went — but the install choice matters more than the brand. Retrofit models (August, Yale Approach) keep your existing deadbolt and key and only swap the interior thumbturn, which is ideal for renters and keyed-alike homes. Full-replacement models (Schlage Encode, Kwikset Halo) put the keypad and Wi-Fi radio in the door itself. We check the two things most DIY installs get wrong — door thickness and backset compatibility, and whether the deadbolt is properly aligned, because a smart lock will jam and drain batteries on any door that has to be pulled shut to lock. We handle the hardware, the app and Wi-Fi (or Z-Wave/Zigbee hub) setup, code programming, and integration with Alexa, Google, or Apple Home, then show you how to manage users.",
         bullets: [
           "All major brands: August, Schlage, Yale, Kwikset",
           "Wi-Fi, Z-Wave, and Zigbee models installed",
@@ -229,7 +229,7 @@ export const categories: ServiceCategory[] = [
         slug: "deadbolt-installation",
         name: "Deadbolt Installation",
         shortDesc: "Heavy-duty deadbolt installation for maximum door security.",
-        longDesc: "A properly installed deadbolt is the single most effective upgrade you can make to your home security. Garden State Locksmith installs single-cylinder, double-cylinder, and smart deadbolts from top brands including Schlage, Medeco, and Baldwin. We ensure perfect bore alignment, deep-set strike plate anchoring with 3\" screws into the stud, and proper door clearance — all factors that determine whether a deadbolt actually resists forced entry.",
+        longDesc: "A deadbolt is the single most cost-effective security upgrade a home can get — but only if it's installed to resist a kick, not just to lock. We fit ANSI Grade 1 or Grade 2 deadbolts with a full 1-inch bolt throw and a hardened anti-saw insert, from Schlage, Medeco, and Baldwin among others. The part that actually stops forced entry is the strike: we install a reinforced box strike anchored with 3-inch screws that reach past the soft jamb into the wall stud, so the frame can't split. We set the bore and backset precisely for a clean throw and advise on single- vs double-cylinder — a double-cylinder (key both sides) protects against reach-through near glass, but we'll walk you through the egress trade-off since it needs a key to get out. Most single-door installs take well under an hour.",
         bullets: [
           "Single and double cylinder deadbolts",
           "High-security Medeco and Mul-T-Lock options available",
@@ -247,7 +247,7 @@ export const categories: ServiceCategory[] = [
         slug: "mailbox-lock-replacement",
         name: "Mailbox Lock Replacement",
         shortDesc: "Fast mailbox lock replacement for homes and apartment buildings.",
-        longDesc: "A broken or compromised mailbox lock puts your mail, identity, and financial information at risk. Garden State Locksmith replaces individual residential mailbox locks and multi-unit cluster mailbox locks for apartments and condos. We stock replacement cylinders for most USPS-approved cluster box units (CBUs) and standard residential mailboxes.",
+        longDesc: "A mailbox lock guards your identity as much as your mail — bank cards, checks, and statements all pass through it. When a key is lost or a cam lock seizes and snaps, we replace it fast. For standard curbside boxes we fit a new wafer cam lock and cut fresh keys; for the cluster box units (CBUs) and 4C wall banks common in condos and apartments, we replace the individual tenant compartment locks with USPS-approved arrow-lock cylinders and can drill out a frozen or vandalized cam without damaging the box. On multi-unit installs we can re-pin the whole bank so no two tenants share a key. If your unit is a locked outgoing-mail or parcel compartment governed by the postal master lock, we'll tell you what a carrier has to handle versus what we can. Spare keys are cut on the spot.",
         bullets: [
           "Residential mailbox lock replacement",
           "Cluster box unit (CBU) servicing for apartments",
@@ -265,7 +265,7 @@ export const categories: ServiceCategory[] = [
         slug: "key-duplication",
         name: "Key Duplication",
         shortDesc: "Accurate key cutting for all home and office key types.",
-        longDesc: "Whether you need one spare or a dozen copies, Garden State Locksmith provides precise key duplication for all residential key types — standard brass keys, high-security Medeco and Mul-T-Lock keys, Kwikset SmartKey, Schlage keys, and more. Our key machines are calibrated regularly to ensure cuts are accurate the first time. Restricted keys and \"Do Not Duplicate\" keys are also handled with proper authorization.",
+        longDesc: "The reason a hardware-store copy so often sticks or won't turn is that it's a copy of an already-worn key — each generation drifts a little further off the original cut depths. We calibrate our duplicators regularly and, when a key is badly worn, cut a fresh one to the lock's original code or by decoding the cylinder, so it runs like the first key rather than the fifth. We duplicate standard brass house keys, Kwikset SmartKey, Schlage, and high-security Medeco and Mul-T-Lock keys, and we cut and program transponder and remote car keys, which an ordinary kiosk can't do. Restricted and patented keyways stamped \"Do Not Duplicate\" are handled only with documented authorization from the keyholder of record — the same protection that keeps someone else from copying yours. Need several? We can key-alike them so one key runs multiple locks.",
         bullets: [
           "All residential key types duplicated",
           "High-security key cutting including Medeco and Mul-T-Lock",
