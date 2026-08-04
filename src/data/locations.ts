@@ -204,20 +204,22 @@ export const locations: Location[] = [
     description: "A small borough situated along the Delaware River waterfront.",
     profile: {
       archetype: "river-borough",
-      vibe: "a tiny waterfront borough of 1930s-50s rowhomes and twins right where the Delaware River meets Newton Creek",
+      vibe: "a half-square-mile Delaware-riverfront borough incorporated in 1924 from the old Centre Township, its 1930s-50s twins and rowhomes wrapped around the busy Brooklawn Circle where Route 130 meets the northern end of Route 47 near Newton Creek",
       housingStock: ["1930s-50s twin rowhomes", "small single-family bungalows", "older brick rowhouses near the river"],
-      landmarks: ["the Brooklawn Circle on Route 130", "Newton Creek Park", "the riverside industrial edge", "the Brooklawn Ballpark"],
-      neighborhoods: ["the Browning Lane corridor", "the streets around Brooklawn School"],
+      landmarks: ["the Brooklawn Circle where Route 130 meets Route 47", "the historic Brooklawn Ballpark (home of legendary American Legion baseball)", "Newton Creek and the riverside industrial edge", "Alice Costello School", "the Browning Road corridor"],
+      neighborhoods: ["the Browning Road corridor", "the streets around Alice Costello School", "the Route 130 circle area"],
       serviceNotes: {
-        auto: "the busy Brooklawn Circle on Route 130 is a frequent site for fender-bender lockouts and emergency tows that need a locksmith",
+        auto: "the busy Brooklawn Circle where Route 130 meets Route 47 is a frequent site for fender-bender lockouts and emergency tows that need a locksmith",
         residential: "century-old twin homes here often share original front-door hardware that requires careful, non-destructive lockout work",
         commercial: "small Route 130 storefronts need durable commercial deadbolts that can handle daily cycling",
-        emergency: "moisture from the river and creek means lock corrosion is one of the most common emergency calls"
+        emergency: "moisture off the Delaware and Newton Creek means lock corrosion is one of the most common emergency calls"
       },
       commonScenarios: [
         "a driver in an accident at the Brooklawn Circle needing emergency vehicle entry",
         "a twin-home owner whose vintage front door lock has corroded shut",
-        "a Route 130 storefront needing a heavy-duty commercial lock upgrade"
+        "a Route 130 storefront needing a heavy-duty commercial lock upgrade",
+        "a riverfront bungalow with a salt-air-corroded deadbolt",
+        "a rekey for a twin home near Alice Costello School after a move-in"
       ]
     }
   },
@@ -344,20 +346,22 @@ export const locations: Location[] = [
     description: "A small borough known for its scenic trails and rich history.",
     profile: {
       archetype: "small-borough",
-      vibe: "a quiet former mill-town borough wrapped around Silver Lake with the historic Lucas Paint Works site and the Camden County Boathouse",
+      vibe: "a 2.2-square-mile former paint-mill borough carved from Voorhees in 1924 and named for the Gibbs family, who settled here in 1706 — wrapped around Silver Lake, the millpond that once powered the historic John Lucas & Co. paint works",
       housingStock: ["older lake-area cottages", "mid-century single-families", "a few newer custom homes"],
-      landmarks: ["Silver Lake", "the historic Lucas Paint Works site", "Camden County Boathouse trailhead", "the Borough Hall"],
-      neighborhoods: ["Silver Lake area", "the central borough"],
+      landmarks: ["Silver Lake", "the historic John Lucas & Co. paint works site", "County Route 561 through town", "Gibbsboro Public School", "the borough's 1700s Gibbs-family settlement roots"],
+      neighborhoods: ["the Silver Lake area", "the central borough", "the Route 561 corridor"],
       serviceNotes: {
-        auto: "trailhead lots near the lake see hikers locking keys in cars on weekend mornings",
+        auto: "lakeside and trail lots near Silver Lake see visitors locking keys in cars on weekend mornings",
         residential: "older lakefront homes often have original door hardware that benefits from careful rekeying rather than replacement",
         commercial: "the borough's handful of small businesses need durable, weather-tolerant commercial locks",
-        emergency: "humidity from Silver Lake causes seasonal lock-jam emergencies in older homes"
+        emergency: "humidity off Silver Lake causes seasonal lock-jam emergencies in older homes"
       },
       commonScenarios: [
-        "a hiker locked out at the boathouse trailhead",
+        "a visitor locked out at a Silver Lake trail lot",
         "a lakefront cottage with a corroded original deadbolt",
-        "a Borough Hall area shop needing an after-hours rekey"
+        "a Route 561 business needing an after-hours rekey",
+        "a mid-century home rekeying original hardware after a purchase",
+        "a lakeside home with a seasonally jammed deadbolt"
       ]
     }
   },
@@ -622,12 +626,12 @@ export const locations: Location[] = [
     description: "A compact borough offering easy access to major transportation routes.",
     profile: {
       archetype: "small-borough",
-      vibe: "a small Black Horse Pike borough with mid-century homes, easy I-295/76 access, and a steady commuter base",
+      vibe: "a 0.9-square-mile Black Horse Pike borough incorporated in 1926 from the old Centre Township and named for tavern-keeper Ephraim Albertson, its mid-century homes sitting right at the I-76/I-295 interchange with a steady commuter base",
       housingStock: ["1950s-60s ranches and Cape Cods", "post-war single-families", "small twin homes", "garden apartments along the Pike"],
-      landmarks: ["Black Horse Pike commercial strip", "Mount Ephraim High School", "Mary Bray Park"],
-      neighborhoods: ["the central borough blocks", "the Bray Avenue area"],
+      landmarks: ["the Black Horse Pike commercial strip", "the I-76/I-295 interchange at the borough's edge", "Mary Bray Park", "Mary Bray Elementary and Kershaw Middle School", "the Route 168 corridor"],
+      neighborhoods: ["the central borough blocks", "the Bray Avenue area", "the Black Horse Pike edge"],
       serviceNotes: {
-        auto: "Black Horse Pike commuters and the I-295 commuter ramps generate steady car-lockout calls",
+        auto: "Black Horse Pike commuters and the I-76/I-295 ramps generate steady car-lockout calls",
         residential: "mid-century homes here often need rekeys after decades on original hardware",
         commercial: "Pike-front storefronts need quick rekeys between staff and reliable commercial deadbolts",
         emergency: "twin homes with shared entries are a frequent source of broken-key calls"
@@ -635,7 +639,9 @@ export const locations: Location[] = [
       commonScenarios: [
         "a commuter locked out at a Pike commercial lot",
         "a Cape Cod needing a full Schlage rekey",
-        "a twin-home shared entry with a snapped key"
+        "a twin-home shared entry with a snapped key",
+        "a lockout near the I-76/I-295 interchange during rush hour",
+        "a garden-apartment tenant needing an evening rekey"
       ]
     }
   },
@@ -645,20 +651,22 @@ export const locations: Location[] = [
     description: "A tight-knit community featuring a vibrant local business district.",
     profile: {
       archetype: "small-borough",
-      vibe: "a walkable, tight-knit borough of 1920s twins and bungalows with a small but growing West Clinton Avenue business district near the Newton Lake Park trail",
+      vibe: "a walkable borough of 1920s twins and bungalows incorporated in 1905 from Haddon Township — first called 'Oakland the Beautiful' before being renamed Oaklyn in 1894 — with the West Clinton Avenue business district, the historic Manor section on Newton Creek, and the Newton Lake Park trail",
       housingStock: ["1920s-30s twin homes", "American Foursquares", "small craftsman bungalows", "a few newer infill colonials"],
-      landmarks: ["West Clinton Avenue business district", "Newton Lake Park", "Oaklyn Public School"],
-      neighborhoods: ["the West Clinton Avenue blocks", "the Newton Lake Park area"],
+      landmarks: ["the West Clinton Avenue business district (County Route 649)", "Newton Lake Park", "the historic Manor section on Newton Creek", "Oaklyn Public School", "the White Horse Pike (Route 30)"],
+      neighborhoods: ["the West Clinton Avenue blocks", "The Manor section near Newton Creek", "the Newton Lake Park area"],
       serviceNotes: {
         auto: "compact diagonal parking on West Clinton Ave generates regular car-lockout calls during dinner hours",
-        residential: "Oaklyn's 1920s twins commonly retain original front-door mortise locks needing skilled service",
+        residential: "Oaklyn's 1920s twins and Manor-section homes commonly retain original front-door mortise locks needing skilled service",
         commercial: "West Clinton Ave shops want quick, after-hours rekeys with no daytime disruption",
         emergency: "shared entries on twin homes mean a single broken key can lock out two families"
       },
       commonScenarios: [
         "a West Clinton Ave diner locked out of a car after dinner",
         "an Oaklyn twin home with a 1925 mortise lock that finally seized",
-        "a small business needing a fast morning rekey"
+        "a small business needing a fast morning rekey",
+        "a Manor-section home near Newton Creek rekeying original hardware",
+        "a Newton Lake Park visitor locked out on a weekend walk"
       ]
     }
   },
@@ -759,23 +767,25 @@ export const locations: Location[] = [
   {
     slug: "somerdale", name: "Somerdale", county: "Camden County", state: "NJ", zipCodes: ["08083"],
     nearbyLocations: ["magnolia", "hi-nella", "stratford"], population: "5,400",
-    description: "A residential community with active local organizations and businesses.",
+    description: "A 1.4-square-mile Camden County bedroom borough along the White Horse Pike, anchored by Warwick Road.",
     profile: {
       archetype: "small-borough",
-      vibe: "a quiet bedroom borough of post-war ranches and Capes, with a small Warwick Road business district and a tight-knit community",
+      vibe: "a 1.4-square-mile bedroom borough created in 1929 from the old Clementon Township, its post-war ranches and Capes strung along the White Horse Pike (Route 30) between Magnolia and Stratford, anchored by the Warwick Road business district and Sterling High School",
       housingStock: ["1950s-60s ranches and Cape Cods", "post-war single-families", "small twin homes"],
-      landmarks: ["Warwick Road business strip", "Somerdale Park School", "Roberts Pond Park"],
-      neighborhoods: ["the Warwick Road area", "the streets near Somerdale Park"],
+      landmarks: ["the Warwick Road business district", "the White Horse Pike (Route 30) corridor", "Somerdale Park and Roberts Pond Park", "Somerdale Park School", "Sterling High School"],
+      neighborhoods: ["the Warwick Road area", "the streets around Somerdale Park", "the White Horse Pike edge"],
       serviceNotes: {
-        auto: "most car lockouts here are residential rather than commercial-lot calls",
-        residential: "Somerdale's 1950s homes commonly need first-time rekeys after decades on original hardware",
-        commercial: "Warwick Road shops want quick rekeys between staff",
+        auto: "most car lockouts here are residential rather than commercial-lot calls, though the White Horse Pike sees its share",
+        residential: "Somerdale's 1950s ranches commonly need first-time rekeys after decades on original hardware",
+        commercial: "Warwick Road and Pike-front shops want quick rekeys between staff",
         emergency: "older deadbolts here often jam during winter cold snaps"
       },
       commonScenarios: [
         "a homeowner locked out walking the dog",
         "a Cape Cod needing a full deadbolt replacement",
-        "a Warwick Road shop with a stuck morning lock"
+        "a Warwick Road shop with a stuck morning lock",
+        "a White Horse Pike storefront rekeying after a staff change",
+        "a same-day rekey on a ranch bought from a 1960s original owner"
       ]
     }
   },
