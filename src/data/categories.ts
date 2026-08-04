@@ -433,7 +433,7 @@ export const categories: ServiceCategory[] = [
         slug: "car-lockout",
         name: "Car Lockout Service",
         shortDesc: "We come to you and open any make or model — fast, no damage.",
-        longDesc: "Locked your keys inside your vehicle? Our automotive locksmiths will come to your exact location — parking lot, roadside, driveway, or garage — and safely open your car without damaging the door, lock, or weather stripping. We carry professional automotive entry tools for all makes and models including modern keyless entry vehicles.",
+        longDesc: "Locked out of your vehicle? We come to wherever you are — a parking lot, the shoulder of the road, your driveway, or a garage — and get you back in without the damage a coat hanger or slim-jim leaves on modern cars. Using an air wedge and long-reach tools, we manually release the lock or inside handle on everything from compacts to pickups and box trucks, including push-to-start vehicles where the fob is sealed inside and keyless cars that have no exterior keyhole at all. Trunk, hatch, and frunk lockouts are handled too. One thing worth knowing: if a child or pet is shut inside, tell our dispatcher — those calls jump straight to the front of the queue and we treat them as true emergencies. And if the key is lost rather than simply locked in, we can cut and program a replacement on the spot so you're not left waiting on a tow.",
         bullets: [
           "All makes and models — domestic, import, luxury",
           "No scratches or damage to vehicle",
@@ -451,7 +451,7 @@ export const categories: ServiceCategory[] = [
         slug: "car-key-replacement",
         name: "Car Key Replacement",
         shortDesc: "New car keys cut and programmed on-site — no dealer needed.",
-        longDesc: "Lost all your car keys? Garden State Locksmith cuts and programs replacement keys for almost every vehicle on the road today — standard metal keys, transponder keys, laser-cut high-security keys, and remote head keys. We come to your location and complete the work on-site, saving you a tow truck trip and the inflated pricing at the dealership. Most vehicles programmed in under an hour.",
+        longDesc: "Lost every key to the car is the worst case — and the one dealers charge the most for, after you've paid to tow it there. We do it at your location instead. There are two parts to a car key: the mechanical cut and the electronic programming, and an all-keys-lost job needs both. We cut the blade to your vehicle's key code — pulled from the VIN or by decoding the door lock — then program the new key to the car's immobilizer through the OBD port, generating the security access the ECU requires. We handle standard metal keys, transponder chip keys, laser-cut (sidewinder) high-security keys, remote-head keys, and smart proximity fobs, and always cut you a spare while we're there so you never repeat this. Most vehicles are done in under an hour; we'll tell you upfront on the rare late-model or luxury platform that still forces a dealer visit.",
         bullets: [
           "All key types: standard, transponder, laser-cut, remote head",
           "All vehicle makes and models supported",
@@ -468,7 +468,7 @@ export const categories: ServiceCategory[] = [
         slug: "transponder-key-programming",
         name: "Transponder Key Programming",
         shortDesc: "Chip key and key fob programming — dealer-alternative service.",
-        longDesc: "Transponder keys contain a microchip that communicates with your vehicle's immobilizer system. If the chip isn't programmed to match your car, the engine won't start — even if the key turns the ignition. Garden State Locksmith programs transponder keys, chip keys, and remote fobs for virtually all makes and models. We also duplicate existing transponder keys so you have a spare.",
+        longDesc: "Since the mid-1990s nearly every car has an immobilizer: a chip in the key's head exchanges a rolling code with the car's ECU, and if the code doesn't match, the engine cranks but won't start — even though the key physically turns. That's why a hardware-store copy of a chip key gets you nowhere. Programming is the electronic half of the job (cutting the blade is the mechanical half), and both have to be right. Adding a spare when you still have a working key is quick; an all-keys-lost situation takes longer because we first have to pull the security data or PIN the car demands. Where the platform allows it, we clone your existing chip onto a new key, which skips programming entirely and saves you money. We program transponder and chip keys, remote-head keys, and proximity fobs through the OBD port for virtually all makes and models — and always encourage a spare, because doing this once is cheaper than doing it after you're stranded.",
         bullets: [
           "All chip key and transponder types programmed",
           "Remote fob programming and synchronization",
@@ -486,7 +486,7 @@ export const categories: ServiceCategory[] = [
         slug: "ignition-repair",
         name: "Ignition Repair & Replacement",
         shortDesc: "Key won't turn? Broken key in ignition? We fix it on-site.",
-        longDesc: "The ignition cylinder is a precision component that wears out over time or can be damaged by forcing a wrong key. Garden State Locksmith technicians diagnose and repair all common ignition problems — key that won't turn, key stuck in ignition, broken key fragment inside the cylinder, and ignitions that won't release the key when the car is in park. We also replace full ignition assemblies when repair isn't sufficient.",
+        longDesc: "When a key won't turn in the ignition, the cause is usually one of a few things, and forcing it makes all of them worse. Often it isn't the ignition at all — it's the steering lock binding against the column (a gentle wiggle of the wheel while turning the key frees it), or a worn key that no longer aligns the wafers. A key that won't come out in park is typically the shifter interlock or park-neutral safety switch, not the cylinder. We diagnose the real fault before pulling anything apart, then rebuild or replace the worn wafers and springs, extract broken key fragments, and where the cylinder is shot we swap the full assembly — and can rekey the new one to match your existing door key so you're not carrying two keys. On many GM, Ford, and Chrysler platforms a replacement ignition also needs the transponder reprogrammed to the car, which we handle on-site in the same visit.",
         bullets: [
           "Key stuck or won't turn in ignition",
           "Broken key extraction from ignition cylinder",
@@ -504,7 +504,7 @@ export const categories: ServiceCategory[] = [
         slug: "key-fob-replacement",
         name: "Key Fob Replacement",
         shortDesc: "Lost or broken key fob replaced and programmed on-site.",
-        longDesc: "Losing a key fob or having it break can mean losing remote start, keyless entry, and panic alarm functionality. Garden State Locksmith provides aftermarket and OEM-compatible replacement key fobs for most vehicles, programmed to your car on-site. We also repair fob housings, replace worn buttons, and resync fobs that have lost their programming without replacing the entire unit.",
+        longDesc: "A dead or broken fob can cost you remote entry, remote start, panic alarm, and — on push-to-start cars — the ability to start at all. Before you pay dealer prices, a few problems are cheap fixes: a fob that's gotten weak usually just needs a coin-cell battery, and a fob whose buttons have quit but still starts the car often just needs new button pads or a fresh housing rather than a whole new unit. When a replacement is genuinely needed, we supply OEM and quality OEM-compatible fobs and program them to your car on-site through the OBD port — including proximity smart-key fobs for keyless-start vehicles, which a kiosk can't do. If a fob has simply lost sync after a battery change or repair, we re-pair it. We'll always try the least-expensive fix that fully restores function, and recommend keeping a programmed spare so a lost fob is an annoyance, not a tow.",
         bullets: [
           "Aftermarket and OEM-compatible fobs stocked",
           "Programming to vehicle completed on-site",
@@ -521,7 +521,7 @@ export const categories: ServiceCategory[] = [
         slug: "motorcycle-locksmith",
         name: "Motorcycle Locksmith",
         shortDesc: "Keys, ignition, and locks for motorcycles and powersports.",
-        longDesc: "Motorcycles, ATVs, and powersports vehicles need specialized locksmith service — their ignitions and key systems are different from cars and most locksmiths won't touch them. Garden State Locksmith technicians are trained and equipped to handle motorcycle lockouts, lost motorcycle key replacement, ignition cylinder replacement, and fob programming for most major brands including Harley-Davidson, Honda, Yamaha, Kawasaki, Suzuki, BMW, and Ducati.",
+        longDesc: "Motorcycles, ATVs, and powersports machines are their own discipline, and most car locksmiths won't touch them. The ignition switch is often tied into the fork/steering lock, and there are usually secondary locks — seat, saddlebag, helmet, and gas cap — keyed to the same blade. When all keys are lost we cut a new one to the bike's key code from the VIN or by decoding a lock, rather than tearing into the switch. Newer bikes add an immobilizer — Harley-Davidson's H-D security system, BMW, and others — so the key also has to be programmed to the bike, which we do on-site. We handle motorcycle and powersports lockouts, lost-key replacement, worn ignition cylinder rebuild or replacement, and chip/fob programming for most major brands including Harley-Davidson, Honda, Yamaha, Kawasaki, Suzuki, BMW, and Ducati — at your garage, a lot, or the roadside.",
         bullets: [
           "Motorcycle lockouts opened without damage",
           "Lost motorcycle key replacement",
