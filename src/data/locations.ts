@@ -300,20 +300,22 @@ export const locations: Location[] = [
     description: "A community with a close-knit feel and easy access to major roads.",
     profile: {
       archetype: "suburban-family",
-      vibe: "a small lakeside borough best known for the historic Clementon Park amusement grounds, with mid-century homes ringing Clementon Lake",
+      vibe: "a 1.9-square-mile lakeside borough created in 1925 from the old Clementon Township, wrapped around Clementon Lake and the historic Clementon Park amusement grounds — once home to the 1919 Jack Rabbit wooden coaster — along the White Horse Pike",
       housingStock: ["mid-century ranches around the lake", "older lakeside cottages", "newer townhouse developments", "small apartment buildings"],
-      landmarks: ["Clementon Park & Splash World", "Clementon Lake", "downtown along the Berlin-Clementon Road", "the Echo Lake area"],
-      neighborhoods: ["the Clementon Lake area", "the streets around Clementon Park"],
+      landmarks: ["Clementon Park & Splash World on Clementon Lake", "Clementon Lake", "the White Horse Pike (Route 30) through downtown", "Rowands Pond Wildlife Management Area", "the Berlin-Clementon Road corridor"],
+      neighborhoods: ["the Clementon Lake area", "the streets around Clementon Park", "the White Horse Pike downtown"],
       serviceNotes: {
         auto: "Clementon Park draws large summer crowds and produces a steady stream of car-lockout calls in the gravel and asphalt lots",
         residential: "1950s-60s lakeside cottages often have original front-door hardware that needs careful non-destructive entry",
-        commercial: "small storefronts on Berlin-Clementon Road need fast rekeys between staff",
+        commercial: "small storefronts on Berlin-Clementon Road and the White Horse Pike need fast rekeys between staff",
         emergency: "summer humidity off the lake causes older deadbolts to swell and jam — a frequent emergency call"
       },
       commonScenarios: [
-        "a family locked out at the Clementon Park parking lot after a long day at Splash World",
+        "a family locked out at the Clementon Park lot after a long day at Splash World",
         "a lakefront cottage with a swollen, jammed deadbolt",
-        "a Berlin-Clementon Road business needing a fast morning rekey"
+        "a Berlin-Clementon Road business needing a fast morning rekey",
+        "a White Horse Pike storefront rekeying after a staff change",
+        "a townhouse resident needing an evening lockout near Clementon Lake"
       ]
     }
   },
@@ -511,10 +513,10 @@ export const locations: Location[] = [
     description: "A small borough once celebrated as a resort town with natural springs.",
     profile: {
       archetype: "historic-resort",
-      vibe: "a tiny former Victorian resort borough where Walt Whitman summered — winding streets, springs, and historic cottages tucked away from the main roads",
+      vibe: "a half-square-mile former Victorian spring resort incorporated in 1913 and named for the therapeutic springs in its laurel groves — where poet Walt Whitman summered in the 1870s — of winding streets and historic cottages just off the White Horse Pike",
       housingStock: ["Victorian-era summer cottages", "1920s craftsman bungalows", "mid-century ranches", "a few newer infill homes"],
-      landmarks: ["the Walt Whitman cottage area", "Crystal Lake", "the historic Atco Avenue blocks", "Laurel Mill Park"],
-      neighborhoods: ["the Crystal Lake area", "the Atco Avenue historic blocks"],
+      landmarks: ["the Walt Whitman summer-cottage area", "the borough's historic mineral springs and laurel groves", "the historic Atco Avenue blocks", "the White Horse Pike (Route 30) along the northeast edge"],
+      neighborhoods: ["the Atco Avenue historic blocks", "the Watsontown section", "the winding cottage streets"],
       serviceNotes: {
         auto: "tight winding streets make residential lockouts more common than commercial-lot calls here",
         residential: "Victorian-era cottages frequently retain original mortise locks and porcelain knobs that need restoration-level care",
@@ -522,9 +524,11 @@ export const locations: Location[] = [
         emergency: "century-old wood doors here cannot tolerate forced entry — non-destructive techniques are mandatory"
       },
       commonScenarios: [
-        "a Crystal Lake area homeowner locked out late at night",
+        "a historic-cottage homeowner locked out late at night",
         "a Victorian cottage needing original mortise lock restoration",
-        "a snapped key in an original Atco Avenue front door lock"
+        "a snapped key in an original Atco Avenue front door lock",
+        "a Watsontown-section home rekeying century-old hardware",
+        "a bungalow owner upgrading to a discreet, period-appropriate deadbolt"
       ]
     }
   },
@@ -1468,20 +1472,22 @@ export const locations: Location[] = [
     description: "A suburban township with strong residential communities and local parks.",
     profile: {
       archetype: "suburban-family",
-      vibe: "a quiet suburban township just east of Mount Holly with strong residential neighborhoods, mid-century homes, and easy downtown Mount Holly access",
-      housingStock: ["1960s-70s single-families and ranches", "newer 1990s-2000s subdivisions", "townhouse developments"],
-      landmarks: ["Eastampton Village Center", "Smithville Park area", "the township's open-space parks"],
-      neighborhoods: ["Eastampton Village", "the older central blocks", "the newer subdivisions"],
+      vibe: "a 5.8-square-mile suburban Burlington County township incorporated in 1880 from Westampton, wrapped around Historic Smithville — the 19th-century industrial village Hezekiah Bradley Smith built for his American Star Bicycle works, now a county park — with US 206 and County Route 537 framing the town",
+      housingStock: ["1960s-70s single-families and ranches", "newer 1990s-2000s subdivisions", "townhouse developments", "older homes near Historic Smithville"],
+      landmarks: ["Historic Smithville and the c.1850 Smithville Mansion", "Smithville Park and its lake", "the Eastampton Village Center", "US Route 206 along the eastern boundary", "County Route 537"],
+      neighborhoods: ["Eastampton Village", "the Historic Smithville area", "the Turpentine section", "the newer subdivisions"],
       serviceNotes: {
         auto: "long suburban driveways mean most car lockouts here happen at home",
         residential: "1970s-era homes commonly need first-time rekeys and full deadbolt upgrades",
-        commercial: "the small Village Center needs quick rekeys when staff rotate",
+        commercial: "the Village Center and the Smithville Park facilities need quick rekeys when staff rotate",
         emergency: "winter cold causes original 1970s deadbolts to bind"
       },
       commonScenarios: [
         "a parent locked out after dropping kids at school",
         "a 1970s home upgrading from original Schlage hardware",
-        "a Village Center business with a frozen morning deadbolt"
+        "a Village Center business with a frozen morning deadbolt",
+        "a visitor locked out at the Smithville Park lot",
+        "a newer subdivision home needing a same-day rekey after closing"
       ]
     }
   },
@@ -1516,10 +1522,10 @@ export const locations: Location[] = [
     description: "A large rural township on the edge of the Pinelands National Reserve.",
     profile: {
       archetype: "pinelands-rural",
-      vibe: "a large rural Pinelands township — Wharton State Forest borders, deep woods, working cranberry bogs, and spread-out homes on big wooded lots",
+      vibe: "a nearly 50-square-mile Pinelands township — the largest in Burlington County by area — incorporated in 1901 and lying entirely within the Pinelands National Reserve, from Apple Pie Hill (the Pines' highest point) to the Carranza Memorial marking aviator Emilio Carranza's 1928 crash, laced by Route 206, Route 532 and Carranza Road",
       housingStock: ["wooded-lot single-families on large parcels", "modular homes deep in the Pinelands", "older country homesteads", "newer custom log-style builds"],
-      landmarks: ["Wharton State Forest borders", "the Tabernacle cranberry bogs", "the Carranza Memorial site", "the township's deep-woods trails"],
-      neighborhoods: ["the township's wooded hamlets"],
+      landmarks: ["Apple Pie Hill and its fire tower (the highest point in the Pine Barrens)", "the Carranza Memorial in Wharton State Forest", "the Tabernacle cranberry bogs", "Route 206 and Carranza Road", "the deep Wharton State Forest trails"],
+      neighborhoods: ["Fairview", "Sandy Ridge", "Fox Chase", "the Carranza Road corridor"],
       serviceNotes: {
         auto: "long unlit Pinelands roads make fast mobile response critical for any after-dark lockout",
         residential: "deep-woods homes have detached garages, sheds, and outbuildings whose locks need regular weatherproofing",
@@ -1529,7 +1535,9 @@ export const locations: Location[] = [
       commonScenarios: [
         "a homeowner locked out of a deep-woods cabin late at night",
         "a cranberry-farm operator needing outbuilding rekeys",
-        "a long-distance Pinelands lockout call requiring rapid mobile response"
+        "a long-distance Pinelands lockout call requiring rapid mobile response",
+        "a hiker locked out at the Apple Pie Hill trailhead",
+        "a Carranza Road homestead rekeying a weathered detached-garage lock"
       ]
     }
   },
@@ -1656,10 +1664,10 @@ export const locations: Location[] = [
     description: "A quiet residential borough adjacent to Woodbury with tree-lined streets.",
     profile: {
       archetype: "small-borough",
-      vibe: "a quiet residential borough of tree-lined streets, mid-century homes, and a tight-knit community right next to Woodbury",
+      vibe: "a 1.25-square-mile Gloucester County borough incorporated in 1915 from Deptford, its tree-lined streets of mid-century homes set between Route 45 and Glen Lake, right next to Woodbury",
       housingStock: ["1950s-60s single-families and ranches", "post-war Cape Cods", "small twin homes", "newer infill colonials"],
-      landmarks: ["the Elm Avenue residential blocks", "Glen Avenue commercial pocket", "the borough's tree-canopy streets"],
-      neighborhoods: ["the Elm Avenue area", "the Glen Avenue blocks"],
+      landmarks: ["Glen Lake (fishing and non-motorized boating)", "the Elm Avenue (County Route 652) corridor", "Route 45 along the western border", "Woodbury Heights Elementary School", "the Glen Avenue commercial pocket"],
+      neighborhoods: ["the Elm Avenue area", "the Glen Lake blocks", "the Glen Avenue pocket"],
       serviceNotes: {
         auto: "neighborhood streets here see most car lockouts at home rather than commercial lots",
         residential: "1950s-era ranches commonly need first-time rekeys after decades on original Schlage hardware",
@@ -1669,7 +1677,9 @@ export const locations: Location[] = [
       commonScenarios: [
         "a homeowner locked out walking the dog",
         "a 1950s ranch needing a full deadbolt replacement",
-        "a Glen Avenue shop with a stuck morning lock"
+        "a Glen Avenue shop with a stuck morning lock",
+        "a Glen Lake visitor locked out at the fishing access",
+        "an infill colonial rekeying builder-grade locks after purchase"
       ]
     }
   },
@@ -2168,20 +2178,22 @@ export const locations: Location[] = [
     description: "A quiet agricultural township in Salem County.",
     profile: {
       archetype: "agricultural-rural",
-      vibe: "a quiet agricultural township home to the famous Cowtown Rodeo — working farms, large rural parcels, and a deep South Jersey farming heritage",
-      housingStock: ["working-farm homesteads", "rural single-families on large parcels", "older farmhouses", "modular homes on wooded lots"],
-      landmarks: ["Cowtown Rodeo (operating since 1929)", "Cowtown Flea Market", "the township's working farms", "the rural Route 40 corridor"],
-      neighborhoods: ["the township's farming hamlets"],
+      vibe: "a 35-square-mile Salem County farm township — one of New Jersey's original 1798 townships, named for early settler Thomas Pyle — that completely surrounds the borough of Woodstown and is home to the Cowtown Rodeo, the oldest weekly professional rodeo in the country, where Routes 40 and 45 meet",
+      housingStock: ["working-farm homesteads", "rural single-families on large parcels", "older farmhouses in Sharptown and Eldridges Hill", "modular homes on wooded lots"],
+      landmarks: ["Cowtown Rodeo (the oldest weekly professional rodeo in the U.S., running since 1929)", "the Cowtown Flea Market", "the Route 40 and Route 45 crossroads at Woodstown", "the Salem River farmland", "the historic Sharptown and Eldridges Hill hamlets"],
+      neighborhoods: ["Sharptown", "Eldridges Hill", "Union Grove", "the Route 40 corridor"],
       serviceNotes: {
-        auto: "Cowtown Rodeo and Flea Market crowds generate weekend car-lockout calls in the gravel lots",
-        residential: "rural farmhouses commonly have detached barns, sheds, and outbuildings needing rekeying after years of weather",
-        commercial: "the few small businesses need durable, weather-resistant commercial hardware",
+        auto: "Cowtown Rodeo and Flea Market crowds generate weekend car-lockout calls in the gravel lots off Route 40",
+        residential: "rural farmhouses across Sharptown and Eldridges Hill commonly have detached barns, sheds, and outbuildings needing rekeying after years of weather",
+        commercial: "farm-supply businesses and the Turnpike-corner warehouses need durable, weather-resistant commercial hardware",
         emergency: "farm-area calls require techs equipped for outbuilding and equipment-lock work"
       },
       commonScenarios: [
         "a rodeo visitor locked out at the Cowtown gravel lot",
-        "a rural farmhouse with a corroded barn-door padlock",
-        "a long-distance after-dark farm lockout"
+        "a Sharptown farmhouse with a corroded barn-door padlock",
+        "a long-distance after-dark farm lockout off Route 45",
+        "an Eldridges Hill homestead rekeying an outbuilding",
+        "a flea-market vendor locked out of a box truck on a Saturday"
       ]
     }
   },
