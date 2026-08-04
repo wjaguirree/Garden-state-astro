@@ -84,23 +84,25 @@ export const locations: Location[] = [
   {
     slug: "audubon-park", name: "Audubon Park", county: "Camden County", state: "NJ", zipCodes: ["08106"],
     nearbyLocations: ["audubon", "oaklyn", "collingswood"], population: "1,000",
-    description: "A small, quiet residential community adjacent to Audubon Borough.",
+    description: "A historic WWII defense-housing borough of garden apartments beside Audubon.",
     profile: {
       archetype: "small-borough",
-      vibe: "a one-square-block enclave of WWII-era garden apartments and small single-families tucked beside Audubon proper",
-      housingStock: ["1940s federal-housing garden apartments", "small post-war single-family rentals"],
-      landmarks: ["the original Audubon Park federal housing complex", "neighboring Audubon Crossings retail", "the Black Horse Pike"],
-      neighborhoods: ["the central Audubon Park complex"],
+      vibe: "a 0.17-square-mile enclave built in 1941 as one of the nation's first federal Mutual Ownership Defense Housing projects — 500 garden-apartment units for Camden's New York Shipbuilding workers — and incorporated as its own borough in 1947, the most recently created town in Camden County",
+      housingStock: ["1941 mutual-ownership federal garden apartments", "the original brick defense-housing rows", "small post-war single-family rentals"],
+      landmarks: ["the historic 1941 Audubon Park defense-housing complex", "Route 168 (the Black Horse Pike) along the border", "neighboring Audubon Crossings retail", "Haddon Lake Park just across the line"],
+      neighborhoods: ["the central garden-apartment complex", "the original brick defense-housing rows", "the Black Horse Pike edge"],
       serviceNotes: {
         auto: "narrow shared driveways and tight off-street parking lead to plenty of locked-in-the-car situations",
-        residential: "the original 1940s apartment locks here are simple but obscure — most modern hardware stores can't cut a matching key",
+        residential: "the original 1940s garden-apartment locks here are simple but obscure — most modern hardware stores can't cut a matching key",
         commercial: "small landlord-managed properties need rekeys between tenants more often than most NJ communities",
-        emergency: "shared entry vestibules in the older complex mean a single broken key can lock a whole hallway out"
+        emergency: "shared entry vestibules in the original brick complex mean a single broken key can lock a whole hallway out"
       },
       commonScenarios: [
         "a tenant locked out of a garden apartment on a Sunday evening",
         "a landlord rekeying a unit after a midnight move-out",
-        "a broken key snapped in a vestibule lock"
+        "a broken key snapped in a shared vestibule lock",
+        "a mutual-ownership resident upgrading original 1941 door hardware",
+        "a car lockout in a tight shared driveway off the Black Horse Pike"
       ]
     }
   },
@@ -268,23 +270,25 @@ export const locations: Location[] = [
   {
     slug: "chesilhurst", name: "Chesilhurst", county: "Camden County", state: "NJ", zipCodes: ["08089"],
     nearbyLocations: ["waterford-township", "winslow-township", "berlin"], population: "1,600",
-    description: "A small, predominantly residential borough in the eastern part of the county.",
+    description: "A historic Pinelands-edge borough and one of New Jersey's early African-American communities.",
     profile: {
-      archetype: "small-borough",
-      vibe: "a tiny historic Pinelands-edge borough founded as a Black summer colony — quiet, wooded, and sparsely populated",
-      housingStock: ["older small bungalows", "modular ranches on wooded lots", "a handful of newer custom homes"],
-      landmarks: ["the historic Chesilhurst founding markers", "the Atlantic City Expressway exit nearby", "the surrounding Pinelands"],
-      neighborhoods: ["the central borough blocks"],
+      archetype: "historic-african-american",
+      vibe: "a 1.7-square-mile Pinelands-edge borough incorporated in 1887 from Waterford and Winslow townships and long one of New Jersey's historic African-American communities, anchored by the 1897 Grant A.M.E. Church at 4th and Washington",
+      housingStock: ["older small bungalows", "early-1900s cottages near the church", "modular ranches on wooded lots", "a handful of newer custom homes"],
+      landmarks: ["the 1897 Grant A.M.E. Church at 4th Street and Washington Avenue", "the former Shirley B. Foster Elementary School", "U.S. Route 30 (the White Horse Pike) through town", "the Atlantic City Expressway access just over the Winslow line", "the surrounding Pinelands"],
+      neighborhoods: ["the historic 4th-and-Washington church blocks", "the wooded Pinelands-edge lots", "the White Horse Pike corridor"],
       serviceNotes: {
-        auto: "long unlit roads mean most car lockouts here happen at home rather than commercial lots",
-        residential: "wooded-lot homes often have older detached garage locks that need rekeying after years of weather exposure",
-        commercial: "the few small businesses here need durable commercial deadbolts that handle Pinelands humidity",
-        emergency: "after-dark lockouts on the borough's quiet roads call for fast, well-equipped mobile response"
+        auto: "long unlit Pinelands roads mean most car lockouts here happen at home rather than on commercial lots",
+        residential: "wooded-lot homes and older cottages often have detached-garage and original front-door locks that need rekeying after years of weather exposure",
+        commercial: "the few small businesses along the White Horse Pike need durable commercial deadbolts that handle Pinelands humidity",
+        emergency: "after-dark lockouts on the borough's quiet wooded roads call for fast, well-equipped mobile response"
       },
       commonScenarios: [
         "a homeowner locked out of a wooded-lot bungalow at night",
         "a detached garage with a corroded lock needing rekey",
-        "a small business needing a heavy-duty deadbolt upgrade"
+        "a small White Horse Pike business needing a heavy-duty deadbolt upgrade",
+        "an older cottage near the historic church upgrading original hardware",
+        "an after-dark lockout off a dark Pinelands road"
       ]
     }
   },
@@ -475,23 +479,25 @@ export const locations: Location[] = [
   {
     slug: "hi-nella", name: "Hi-Nella", county: "Camden County", state: "NJ", zipCodes: ["08083"],
     nearbyLocations: ["somerdale", "stratford", "magnolia"], population: "800",
-    description: "One of the smallest boroughs in the county, offering a quiet residential setting.",
+    description: "One of Camden County's smallest boroughs — a quarter-square-mile residential pocket.",
     profile: {
       archetype: "small-borough",
-      vibe: "a one-square-block residential pocket of post-war ranches and small singles tucked between Somerdale and Stratford",
-      housingStock: ["1950s ranches and Cape Cods", "a few small single-family infill homes"],
-      landmarks: ["the central residential blocks", "the borough's tiny municipal building", "neighboring Stratford and Somerdale commercial strips"],
-      neighborhoods: ["the central borough blocks"],
+      vibe: "a 0.23-square-mile residential pocket created in 1929 out of the old Clementon Township, its name a Native American term for 'high ground' (though it may honor Nella Parker, whose family platted Hi-Nella Estates in the late 1920s) — post-war ranches on quiet borough-maintained streets with no highway running through",
+      housingStock: ["1950s ranches and Cape Cods", "late-1920s Hi-Nella Estates lots", "a few small single-family infill homes"],
+      landmarks: ["the original Hi-Nella Estates blocks", "the borough's small municipal building", "County Route 727 through town", "the neighboring Stratford and Somerdale commercial strips"],
+      neighborhoods: ["the Hi-Nella Estates core", "the ranch blocks toward Somerdale", "the Stratford-side streets"],
       serviceNotes: {
-        auto: "long suburban driveways mean most car lockouts here happen at home",
-        residential: "Hi-Nella's mid-century homes often still run on original Schlage and Kwikset hardware ready for upgrade",
-        commercial: "the borough has very few commercial properties, so most service here is residential",
-        emergency: "tight-knit borough means our techs know the streets and arrive quickly"
+        auto: "long suburban driveways mean most car lockouts here happen at home, not on any highway",
+        residential: "Hi-Nella's mid-century ranches often still run on original Schlage and Kwikset hardware ready for upgrade",
+        commercial: "with no highway and almost no storefronts, nearly all service here is residential",
+        emergency: "barely three miles of quiet borough streets means our techs know every block and arrive quickly"
       },
       commonScenarios: [
         "a homeowner locked out after taking out the trash",
         "a 1950s ranch needing a full deadbolt replacement",
-        "a borough resident requesting a same-day rekey after a roommate move-out"
+        "a resident requesting a same-day rekey after a roommate move-out",
+        "an original Hi-Nella Estates home upgrading late-1920s door hardware",
+        "a driveway car lockout on a quiet residential street"
       ]
     }
   },
@@ -704,24 +710,26 @@ export const locations: Location[] = [
   },
   {
     slug: "pine-valley", name: "Pine Valley", county: "Camden County", state: "NJ", zipCodes: ["08021"],
-    nearbyLocations: ["pine-hill", "clementon", "berlin"], population: "10",
-    description: "A unique borough centered around a world-renowned private golf course.",
+    nearbyLocations: ["pine-hill", "clementon", "berlin"], population: "21",
+    description: "A world-famous private golf enclave — now part of Pine Hill — built around the Pine Valley Golf Club.",
     profile: {
       archetype: "luxury-exclusive",
-      vibe: "a tiny, ultra-private borough built almost entirely around the world-renowned Pine Valley Golf Club — discreet, quiet, and known for the highest standards in everything",
-      housingStock: ["a small number of private cottages and member residences on club grounds"],
-      landmarks: ["Pine Valley Golf Club (consistently ranked the #1 course in the world)", "the club's entry gates"],
-      neighborhoods: ["the club grounds"],
+      vibe: "a legendary, ultra-private enclave built entirely around Pine Valley Golf Club — long ranked the #1 course in the world — with only about two dozen member residences; created in 1929 out of the old Clementon Township and merged into neighboring Pine Hill in 2022",
+      housingStock: ["roughly two dozen private member cottages on the club grounds", "the club's own facility and lodge buildings"],
+      landmarks: ["Pine Valley Golf Club (regularly ranked the #1 golf course in the world)", "the private entry gates near the Clementon line", "the members' clubhouse and lodge", "the wooded course perimeter bordering Pine Hill"],
+      neighborhoods: ["the club grounds", "the perimeter member cottages", "the Clementon-side gatehouse approach"],
       serviceNotes: {
-        auto: "occasional member and guest car-lockout calls at the club entrance and lots",
-        residential: "the small number of on-site residences expect discreet, white-glove locksmith service",
-        commercial: "the club's facilities require high-security commercial-grade locks, master-key systems, and absolute discretion",
-        emergency: "when something goes wrong here, response speed and professionalism matter as much as the work itself"
+        auto: "member and guest vehicle lockouts at the club lots and along the private entry road, where every road on the grounds is privately owned",
+        residential: "the two dozen on-grounds residences expect discreet, appointment-only, white-glove locksmith service",
+        commercial: "the clubhouse and lodge require high-security commercial cylinders, restricted master-key systems, and absolute discretion",
+        emergency: "on grounds this exclusive, arrival speed, professionalism, and confidentiality matter as much as the repair itself"
       },
       commonScenarios: [
         "a member or guest locked out of a vehicle at the club lot",
-        "a discreet rekey of a club-grounds residence",
-        "a high-security lock upgrade for a club facility"
+        "a discreet, appointment-only rekey of an on-grounds residence",
+        "a restricted master-key update for a clubhouse facility",
+        "a high-security cylinder upgrade on a member cottage",
+        "an after-hours lockout at the private entry gate"
       ]
     }
   },
@@ -797,23 +805,25 @@ export const locations: Location[] = [
   {
     slug: "tavistock", name: "Tavistock", county: "Camden County", state: "NJ", zipCodes: ["08033"],
     nearbyLocations: ["haddonfield", "cherry-hill", "voorhees"], population: "5",
-    description: "A tiny borough primarily consisting of the historic Tavistock Country Club.",
+    description: "New Jersey's smallest municipality — essentially the historic Tavistock Country Club.",
     profile: {
       archetype: "luxury-exclusive",
-      vibe: "a famously tiny borough — just a handful of residents — built almost entirely around the historic Tavistock Country Club, founded in 1921",
-      housingStock: ["a small number of private member residences on club grounds"],
-      landmarks: ["Tavistock Country Club", "the club's historic clubhouse and grounds"],
-      neighborhoods: ["the club grounds"],
+      vibe: "the smallest municipality in New Jersey by population, a quarter-square-mile borough incorporated in 1921 out of the defunct Centre Township so Tavistock Country Club members — many from Camden's Victor Talking Machine Company — could play golf on Sundays, which a Haddonfield-area blue law then forbade",
+      housingStock: ["a handful of private member residences on the club grounds", "the country club's own buildings"],
+      landmarks: ["Tavistock Country Club (founded 1921)", "the historic clubhouse and golf grounds", "the club approach near the Haddonfield line", "the wooded edges toward Barrington and Lawnside"],
+      neighborhoods: ["the club grounds", "the clubhouse approach", "the member-residence perimeter"],
       serviceNotes: {
-        auto: "occasional member and guest car-lockout calls at the club lot",
-        residential: "the few on-site residences expect discreet, white-glove service",
-        commercial: "the club's facilities need high-security commercial-grade locks and master-key systems",
-        emergency: "discretion and speed matter equally for any service call here"
+        auto: "member and guest car lockouts at the club lot and along the private approach road",
+        residential: "the few on-site residences expect discreet, scheduled, white-glove service",
+        commercial: "the clubhouse needs high-security commercial-grade locks and a restricted master-key system",
+        emergency: "discretion and speed matter equally on any call to grounds this private and this small"
       },
       commonScenarios: [
         "a member locked out of a car at the club lot",
         "a discreet rekey of a club-grounds residence",
-        "a high-security upgrade for a club facility"
+        "a restricted master-key update for a clubhouse facility",
+        "a high-security upgrade on the clubhouse entry",
+        "an after-hours lockout along the private club approach"
       ]
     }
   },
