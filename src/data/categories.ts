@@ -37,7 +37,7 @@ export const categories: ServiceCategory[] = [
         slug: "house-lockout",
         name: "House Lockout",
         shortDesc: "Professional, damage-free home lockout service. Back inside fast.",
-        longDesc: "Being locked out of your home is stressful — but it doesn't have to turn into a crisis. Garden State Locksmith dispatches a certified NJ technician to your location promptly. We use professional non-destructive entry techniques to open any residential lock without damaging your door, frame, or lock hardware. Whether it's a standard doorknob, a deadbolt, a smart lock, or a security door, we've got the tools and training to get you back inside fast.",
+        longDesc: "Being locked out of your home is stressful, but it rarely needs to become a broken door. A Garden State technician arrives with a full pick-and-bypass kit and, in most cases, opens the lock non-destructively in minutes — single-pin picking on pin-tumbler deadbolts, latch-slipping and shimming on spring latches, and specialty methods for smart and high-security locks. We confirm you're the resident first, then choose the least-invasive method for your exact hardware: a 1920s mortise set is handled very differently from a modern Schlage or a Kwikset SmartKey cylinder. Drilling is a true last resort, used only on a failed or hardened lock once every other option is exhausted, and we tell you before we ever reach for a drill. Once you're inside, we can rekey or replace anything worn on the same visit.",
         bullets: [
           "Non-destructive entry — no damage to door or lock",
           "All residential lock types: deadbolts, knob locks, smart locks",
@@ -55,14 +55,14 @@ export const categories: ServiceCategory[] = [
         slug: "car-lockout",
         name: "Car Lockout",
         shortDesc: "We come to you and open any make or model — no damage, no hassle.",
-        longDesc: "Locked your keys in the car? Don't risk damaging your vehicle with a DIY attempt. Our automotive locksmiths are equipped to safely open any car, truck, or SUV without scratching the paint or damaging the weather stripping or door panel. We service all makes and models — domestic and foreign — and we come directly to your location anywhere in New Jersey.",
+        longDesc: "Keys locked in the car? Skip the coat-hanger and slim-jim — on modern vehicles those catch airbag wiring, side-impact sensors, and power-window cabling behind the door panel, turning a lockout into a repair bill. Our automotive techs use the professional equivalent: an air wedge to create a small gap and a long-reach tool to pop the manual lock or door handle, with no scratched paint, bent frame, or torn weather-stripping. We open any make and model — domestic, foreign, and luxury — including push-to-start vehicles where the fob is locked inside. If your only key is trapped or lost, we can also cut and program a replacement on the spot so you're not stranded waiting on a tow.",
         bullets: [
-          "Any make or model — domestic, foreign, luxury",
-          "Zero damage to door, window, or lock mechanisms",
+          "Air-wedge and long-reach tools — no slim-jim damage",
+          "Any make or model — domestic, foreign, luxury, push-to-start",
+          "Zero damage to door, window, paint, or weather-stripping",
           "Mobile service — we come to your exact location",
-          "Fast local dispatch statewide",
-          "Available 7 AM – 10 PM including holidays",
-          "Transponder and smart key vehicles serviced"
+          "Replacement key cut and programmed on-site if needed",
+          "Available 7 AM – 10 PM including holidays"
         ],
         responseTime: "Same Day",
         image: "/car-lockout-service-new-jersey.webp",
@@ -73,7 +73,7 @@ export const categories: ServiceCategory[] = [
         slug: "business-lockout",
         name: "Business Lockout",
         shortDesc: "Discreet commercial lockout service — minimal downtime, every time.",
-        longDesc: "A business lockout costs money every minute. Whether you're locked out of your office, retail store, warehouse, or restaurant, Garden State Locksmith provides fast, discreet commercial lockout service across New Jersey. Our technicians carry commercial-grade entry tools to handle everything from standard commercial deadbolts to high-security grade-1 locks and electronic access systems.",
+        longDesc: "A business lockout costs money every minute the doors stay shut — and storefront hardware is a different animal from a house lock. We're equipped for commercial-grade cylinders, mortise locks, aluminum-frame glass doors with narrow-stile deadlatches, rim exit devices, and electronic keypads and fobs. Our tech assesses the door type on arrival and opens it without damaging the storefront, then verifies you're authorized to be there before any work begins — no manager present, no entry. When a lockout traces back to a fired employee, a lost master, or a failed access reader, we can rekey the affected cylinders or reprogram credentials on the same visit so the gap closes immediately. Most calls are handled discreetly, before staff or customers ever notice.",
         bullets: [
           "All commercial lock types including high-security hardware",
           "Electronic keypad and access control entry",
@@ -91,7 +91,7 @@ export const categories: ServiceCategory[] = [
         slug: "broken-key-extraction",
         name: "Broken Key Extraction",
         shortDesc: "Key snapped in the lock? We extract it and cut a new one on-site.",
-        longDesc: "A broken key stuck in a lock is a double problem — you can't use the lock and you can't get your key out. Don't make it worse with pliers or improvised tools. Our technicians use precision extraction tools to remove broken key fragments from any lock cylinder — door locks, deadbolts, padlocks, car door locks, and ignitions — without damaging the lock. Once extracted, we cut a fresh replacement key on-site.",
+        longDesc: "A key snaps off when the metal is fatigued — usually a worn brass key in a stiff or misaligned lock — and the broken half stays wedged in the keyway. Poking at it with pliers, glue, or a jigsaw blade almost always pushes the fragment deeper or scores the wafers, turning a five-minute extraction into a cylinder replacement. Our techs use spiral and hook-style extractor picks that grab the blade and draw it straight out along the keyway, leaving the lock intact. Once the fragment is out, we cut you a fresh key on-site and check why the key failed in the first place — often the cylinder needs cleaning, lubrication, or a rekey. We handle door locks, deadbolts, padlocks, car doors, and ignition cylinders, where broken keys are trickiest.",
         bullets: [
           "Precise extraction tools — no damage to lock cylinder",
           "Residential, commercial, and automotive locks",
@@ -109,7 +109,7 @@ export const categories: ServiceCategory[] = [
         slug: "lock-change-after-break-in",
         name: "Lock Change After Break-In",
         shortDesc: "Urgent lock replacement and door reinforcement after a break-in.",
-        longDesc: "After a break-in, your immediate priority is securing the property again. Garden State Locksmith provides emergency lock change and door reinforcement services throughout New Jersey. We assess all entry points, replace compromised hardware with high-security alternatives, and reinforce weak areas to prevent re-entry. We work quickly to restore your sense of safety.",
+        longDesc: "After a break-in, the goal is to make the home secure again tonight — and to fix the weak point the intruder actually used. Most forced entries don't defeat the lock; they split the jamb because the strike plate was held by short screws into soft trim. So we do more than swap cylinders: we replace compromised locks, install a heavy box strike anchored with 3-inch screws into the wall stud, and add a reinforcement plate or wrap where the frame cracked. If a window or slider was the entry point, we address that hardware too. We can photograph and itemize everything for your insurance claim and police report, and where it makes sense we'll recommend a high-security deadbolt so the same method won't work twice.",
         bullets: [
           "Emergency same-day response across NJ",
           "Full property security assessment included",
@@ -127,7 +127,7 @@ export const categories: ServiceCategory[] = [
         slug: "emergency-lock-repair",
         name: "Emergency Lock Repair",
         shortDesc: "Professional repair for jammed, frozen, or malfunctioning locks.",
-        longDesc: "A malfunctioning lock is a security emergency, especially if it's your front door, office entrance, or vehicle. Our mobile technicians diagnose and repair all types of lock failures — jammed mechanisms, frozen cylinders, worn tumblers, loose mortise locks, and more. We carry a full inventory of replacement parts to complete most repairs on the spot.",
+        longDesc: "A lock that sticks, spins, or won't throw its bolt is telling you it's about to fail completely — often at the worst moment. Most of these problems aren't the lock itself but alignment: a door that's dropped on its hinges or swelled with humidity so the bolt no longer meets the strike, a set screw backed out, or a worn tailpiece and springs inside the cylinder. Our tech diagnoses the real cause instead of just forcing it — realigning the strike, adjusting or replacing the latch, cleaning and re-lubricating a gummed cylinder, or swapping worn tumblers and springs from the parts stock on the truck. Frozen or seized cylinders in winter are handled without cracking the housing. Most repairs are finished on the first visit, and we'll flag any lock that's genuinely past saving before you spend on it.",
         bullets: [
           "All lock types — residential, commercial, automotive",
           "Jammed, frozen, stripped, and worn lock repair",
