@@ -6,6 +6,7 @@ import FAQAccordion from "@/components/shared/FAQAccordion.astro";
 import { categories } from "@/data/categories";
 import { locations } from "@/data/locations";
 import { generateServiceLocationContent } from "@/data/content";
+import { faqSchema } from "@/lib/seo";
 import { Phone, Clock, CheckCircle2, ChevronRight, ArrowRight, MapPin, ShieldCheck } from "lucide-react";
 
 // NOTE: the flat `/services/{service}/{town}` pages were removed — they targeted
@@ -49,13 +50,26 @@ const { kind } = Astro.props;
     const relatedServices = category.subServices.filter((s: typeof category.subServices[number]) => s.slug !== subService.slug).slice(0, 3);
     const counties = Array.from(new Set(locations.map((l) => l.county)));
 
+    // Service-specific FAQs built from this service's own unique longDesc/bullets,
+    // so the sub-hub carries substantial content that differs from every other
+    // sub-hub (which otherwise share the statewide city list).
+    const svcLower = subService.name.toLowerCase();
+    const introSentences = subService.longDesc.split(/(?<=\.)\s+/).slice(0, 2).join(" ");
+    const lc = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
+    const subFaqs = [
+      { q: `What does ${svcLower} actually involve?`, a: introSentences },
+      { q: `What's included in your ${svcLower} service?`, a: `Every ${svcLower} job includes ${subService.bullets.slice(0, 4).map(lc).join("; ")}.` },
+      { q: `How fast can you complete ${svcLower} in New Jersey?`, a: `Typical response is ${subService.responseTime.toLowerCase()}. Because we're fully mobile, we come to your location anywhere in New Jersey from 7 AM to 10 PM — there's no shop to drive to and nothing to bring.` },
+      { q: `Do you offer ${svcLower} near me?`, a: `Yes — we cover every town in New Jersey. Choose your municipality from the list below for local response times and specifics on ${svcLower} in your area.` },
+    ];
+
     return (
       <BaseLayout
         title={`${subService.name} in New Jersey | Garden State Locksmith`}
         description={subService.longDesc.slice(0, 155)}
         canonical={`/services/${category.slug}/${subService.slug}`}
         imageUrl={subService.image}
-        schema={schemaData}
+        schema={[schemaData, faqSchema(subFaqs)]}
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Services", path: "/services/" },
@@ -143,11 +157,17 @@ const { kind } = Astro.props;
                   ))}
                 </div>
 
-                <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6">
-                  <h3 class="font-serif font-bold text-lg mb-3">Serving All of New Jersey</h3>
-                  <p class="text-muted-foreground text-sm leading-relaxed">
-                    Garden State Locksmith provides {subService.name.toLowerCase()} throughout the entire state of New Jersey — including Camden County, Burlington County, Gloucester County, Mercer County, Ocean County, Monmouth County, Essex County, Hudson County, Bergen County, and Passaic County. Our mobile technicians are strategically positioned to reach you promptly. Whether you're in a major city or a rural township, we service your location.
-                  </p>
+                <h3 class="text-xl font-serif font-bold mb-5">{subService.name} — Common Questions</h3>
+                <div class="space-y-3">
+                  {subFaqs.map((faq) => (
+                    <details class="group border border-border/60 rounded-xl overflow-hidden">
+                      <summary class="flex items-center justify-between px-6 py-4 cursor-pointer font-serif font-bold text-foreground text-sm md:text-base list-none hover:bg-muted/30 transition-colors [&::-webkit-details-marker]:hidden">
+                        {faq.q}
+                        <ChevronRight className="h-4 w-4 text-primary group-open:rotate-90 transition-transform shrink-0 ml-4" />
+                      </summary>
+                      <div class="px-6 py-4 border-t border-border/40 text-muted-foreground text-sm leading-relaxed bg-background">{faq.a}</div>
+                    </details>
+                  ))}
                 </div>
 
                 {subService.photos && subService.photos.length > 0 && (
