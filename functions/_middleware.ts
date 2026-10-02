@@ -5,15 +5,15 @@
 // dropping them — as long as the pause is short (days, not many weeks).
 //
 // Toggle:
-//   • ON  (default here) → whole site shows the maintenance page.
-//   • OFF → set a Cloudflare env var  MAINTENANCE = off  (Settings → Variables),
-//           or flip DEFAULT_ON below to false and redeploy.
+//   • OFF (default here) → site is live. Set MAINTENANCE = on to pause again.
+//   • ON  → set a Cloudflare env var  MAINTENANCE = on  (Settings → Variables),
+//           or flip DEFAULT_ON below to true and redeploy.
 //
 // IMPORTANT: keep this pause short. If the site returns 503 for many weeks,
 // Google will eventually de-index it anyway. Remove maintenance mode as soon
 // as you're ready to be visible again.
 
-const DEFAULT_ON = true;
+const DEFAULT_ON = false;
 
 interface Env {
   MAINTENANCE?: string;
