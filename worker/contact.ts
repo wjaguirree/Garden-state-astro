@@ -1,4 +1,4 @@
-interface Env {
+export interface ContactEnv {
   RESEND_API_KEY?: string;
   CONTACT_TO_EMAIL?: string;
   CONTACT_FROM_EMAIL?: string;
@@ -24,7 +24,7 @@ function json(data: unknown, status: number) {
   });
 }
 
-export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
+async function handlePost(request: Request, env: ContactEnv): Promise<Response> {
   let payload: LeadPayload;
   try {
     payload = await request.json();
@@ -85,8 +85,9 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   } catch {
     return json({ ok: false, error: "Couldn't send your message. Please call us instead." }, 502);
   }
-};
+}
 
-export const onRequestGet: PagesFunction = async () => {
+export function handleContact(request: Request, env: ContactEnv): Promise<Response> | Response {
+  if (request.method === "POST") return handlePost(request, env);
   return json({ ok: false, error: "Method not allowed" }, 405);
-};
+}

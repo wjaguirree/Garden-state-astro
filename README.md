@@ -1,6 +1,6 @@
 # Garden State Locksmith — Astro site
 
-Static AstroJS site (~4,000 prerendered pages) with programmatic local SEO for
+Static AstroJS site (582 prerendered pages) with programmatic local SEO for
 New Jersey towns × locksmith services. Zero-JS content; React islands only for
 the mobile menu, booking form, and service-area map.
 
@@ -13,18 +13,21 @@ npm run build      # outputs static site to dist/
 npm run preview    # serve the built dist/ locally
 ```
 
-## Deploy (Cloudflare Pages)
+## Deploy (Cloudflare Worker)
 
-This repo is built for **Cloudflare Pages** (not a Worker — the contact form in
-`functions/api/contact.ts` is a Pages Function and only runs on Pages).
+The site runs as a **Cloudflare Worker with static assets** (configured in
+`wrangler.jsonc`). Pages are plain files from `dist/`; only `/api/contact`
+(the contact/booking form, `worker/contact.ts`) runs code.
 
-1. Cloudflare dashboard → **Workers & Pages → Create → Pages → Connect to Git**
-   → select this repo.
-2. Build command: `npm run build`  ·  Build output directory: `dist`
-3. Env var (Settings → Variables & Secrets, type **Secret**):
-   `RESEND_API_KEY` — for the contact/booking form email notifications.
-   (Without it, the form returns a graceful error; pages still work.)
-4. Attach the real domain `gardenstatelocksmithnj.com` as a custom domain.
+- Every push to `main` builds and deploys to production (Workers Builds).
+- Deploy command: `npx wrangler deploy`. The build runs automatically first.
+- The `name` in `wrangler.jsonc` must match the Worker's name in the dashboard.
+- Secret (Worker → Settings → Variables & Secrets, type **Secret**):
+  `RESEND_API_KEY` for the form emails. Without it, the form shows
+  "please call us instead" and pages still work.
+- Redirects live in `public/_redirects` (max 100 pattern rules; keep plain
+  rules first).
+- Local test with the Worker: `npm run cf:dev`.
 
 > If the GitHub repo owner changes, Cloudflare loses its Git connection —
 > the new owner must reconnect the repo (re-authorize the Cloudflare GitHub
@@ -32,14 +35,14 @@ This repo is built for **Cloudflare Pages** (not a Worker — the contact form i
 
 ## Go-live SEO checklist
 
-- [ ] Point `gardenstatelocksmithnj.com` DNS at the Pages project (canonicals
-      already target this domain).
+- [ ] Point `gardenstatelocksmithnj.com` at the Worker (canonicals already
+      target this domain).
 - [ ] Verify the site in **Google Search Console**.
 - [ ] Submit `sitemap-index.xml` in Search Console.
-- [ ] Confirm the contact form submits (needs `RESEND_API_KEY` + Pages project).
+- [ ] Confirm the contact form submits (needs `RESEND_API_KEY` on the Worker).
 
 ## Content
 
 All page content is data-driven — edit the files in `src/data/`:
-`locations.ts`, `categories.ts`, `services.ts`, `blogPosts.ts`. Pages regenerate
+`locations.ts`, `categories.ts`, `blogPosts.ts`. Pages regenerate
 on the next build.

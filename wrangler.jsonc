@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Must match the Worker's name in the Cloudflare dashboard.
+  "name": "garden-state-astro",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-07-01",
+  // Build the static site before every deploy, so `npx wrangler deploy`
+  // works whatever build command the dashboard has.
+  "build": {
+    "command": "npm run build"
+  },
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    // Only the contact form runs code; everything else is static.
+    "run_worker_first": ["/api/*"],
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+  // Secrets (set in the dashboard, never in this file):
+  //   RESEND_API_KEY      required, from resend.com
+  // Optional plain variables:
+  //   CONTACT_TO_EMAIL    default info@gardenstatelocksmithnj.com
+  //   CONTACT_FROM_EMAIL  default onboarding@resend.dev (works only until
+  //                       the domain is verified in Resend)
+  "observability": { "enabled": true }
+}

@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "pages:dev": "astro build && wrangler pages dev dist"
+    "cf:dev": "astro build && wrangler dev"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.1",
