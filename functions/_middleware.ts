@@ -13,31 +13,7 @@
 // Google will eventually de-index it anyway. Remove maintenance mode as soon
 // as you're ready to be visible again.
 
-import { SERVICE_PAGE_TOWNS } from "../src/data/indexingPriority";
-
 const DEFAULT_ON = false;
-
-// Towns merged into another slug (same place listed twice).
-const MERGED_TOWNS: Record<string, string> = {
-  "voorhees-township": "voorhees",
-};
-
-// Service × town pages now exist only for SERVICE_PAGE_TOWNS. Any other
-// /services/{category}/{sub}/{town}/ URL 301s to that town's /locations/ page.
-// Done here rather than in _redirects, which caps pattern rules at 100.
-function legacyRedirect(url: URL): string | null {
-  const segs = url.pathname.split("/").filter(Boolean);
-  if (segs[0] === "locations" && segs.length === 2 && MERGED_TOWNS[segs[1]]) {
-    return `/locations/${MERGED_TOWNS[segs[1]]}/`;
-  }
-  if (segs[0] !== "services" || segs.length !== 4) return null;
-  const [, cat, sub, town] = segs;
-  const merged = MERGED_TOWNS[town];
-  if (merged) {
-    return SERVICE_PAGE_TOWNS.has(merged) ? `/services/${cat}/${sub}/${merged}/` : `/locations/${merged}/`;
-  }
-  return SERVICE_PAGE_TOWNS.has(town) ? null : `/locations/${town}/`;
-}
 
 interface Env {
   MAINTENANCE?: string;
@@ -87,9 +63,6 @@ const PAGE = `<!doctype html>
 export const onRequest: PagesFunction<Env> = async (context) => {
   const flag = (context.env.MAINTENANCE ?? (DEFAULT_ON ? "on" : "off")).toLowerCase();
   if (flag !== "on") {
-    const url = new URL(context.request.url);
-    const target = legacyRedirect(url);
-    if (target) return Response.redirect(new URL(target, url.origin).toString(), 301);
     return context.next();
   }
   return new Response(PAGE, {

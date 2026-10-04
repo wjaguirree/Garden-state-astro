@@ -1,10 +1,9 @@
-# Springfield slug cleanup
+# Cloudflare redirects. Plain rules must come before pattern rules: anything
+# after the first pattern rule counts toward the 100 pattern-rule limit.
+
+# --- Plain (exact) rules ---
 /locations/springfield-township-burlington/ /locations/springfield-township/ 301
 /locations/springfield-township-burlington /locations/springfield-township/ 301
-
-# ── Standalone service landing pages consolidated into the category hubs ────
-# /{x}-locksmith/ duplicated /services/{category}/ (same service, same keyword).
-# The category hub is the canonical page (breadcrumb parent of ~700 child pages).
 /residential-locksmith/ /services/residential/ 301
 /residential-locksmith /services/residential/ 301
 /commercial-locksmith/ /services/commercial/ 301
@@ -13,53 +12,118 @@
 /automotive-locksmith /services/automotive/ 301
 /emergency-locksmith/ /services/emergency/ 301
 /emergency-locksmith /services/emergency/ 301
-
-# ── Flat service pages consolidated into category sub-services ──────────────
-# These duplicated the /services/{category}/{sub}/ pages (same search intent,
-# roughly half the content), so Google indexed only one of each pair. Removing
-# them ends the cannibalisation. Exact hub rules MUST precede the /* splats.
-
 /services/lockout-services/ /services/emergency/house-lockout/ 301
-/services/lockout-services/* /services/emergency/house-lockout/:splat 301
-
 /services/emergency-locksmith/ /services/emergency/ 301
-/services/emergency-locksmith/* /services/emergency/house-lockout/:splat 301
-
 /services/commercial-locksmith/ /services/commercial/ 301
-/services/commercial-locksmith/* /services/commercial/commercial-lock-change/:splat 301
-
 /services/lock-installation/ /services/residential/lock-installation/ 301
-/services/lock-installation/* /services/residential/lock-installation/:splat 301
-
 /services/lock-repair/ /services/residential/lock-repair/ 301
-/services/lock-repair/* /services/residential/lock-repair/:splat 301
-
 /services/deadbolt-installation/ /services/residential/deadbolt-installation/ 301
-/services/deadbolt-installation/* /services/residential/deadbolt-installation/:splat 301
-
 /services/key-duplication/ /services/residential/key-duplication/ 301
-/services/key-duplication/* /services/residential/key-duplication/:splat 301
-
 /services/rekeying-services/ /services/residential/lock-rekeying/ 301
-/services/rekeying-services/* /services/residential/lock-rekeying/:splat 301
-
 /services/master-key-systems/ /services/commercial/master-key-systems/ 301
-/services/master-key-systems/* /services/commercial/master-key-systems/:splat 301
-
 /services/safe-opening/ /services/commercial/safe-opening/ 301
-/services/safe-opening/* /services/commercial/safe-opening/:splat 301
-
 /services/safe-installation/ /services/commercial/safe-installation/ 301
-/services/safe-installation/* /services/commercial/safe-installation/:splat 301
-
 /services/car-lockout-service/ /services/automotive/car-lockout/ 301
-/services/car-lockout-service/* /services/automotive/car-lockout/:splat 301
-
 /services/automotive-key-replacement/ /services/automotive/car-key-replacement/ 301
-/services/automotive-key-replacement/* /services/automotive/car-key-replacement/:splat 301
-
 /services/transponder-key-programming/ /services/automotive/transponder-key-programming/ 301
-/services/transponder-key-programming/* /services/automotive/transponder-key-programming/:splat 301
-
 /services/ignition-repair/ /services/automotive/ignition-repair/ 301
+/locations/voorhees-township/ /locations/voorhees/ 301
+
+# --- Pattern rules ---
+# Old flat service URLs -> category paths; voorhees-township merged into voorhees.
+/services/lockout-services/* /services/emergency/house-lockout/:splat 301
+/services/emergency-locksmith/* /services/emergency/house-lockout/:splat 301
+/services/commercial-locksmith/* /services/commercial/commercial-lock-change/:splat 301
+/services/lock-installation/* /services/residential/lock-installation/:splat 301
+/services/lock-repair/* /services/residential/lock-repair/:splat 301
+/services/deadbolt-installation/* /services/residential/deadbolt-installation/:splat 301
+/services/key-duplication/* /services/residential/key-duplication/:splat 301
+/services/rekeying-services/* /services/residential/lock-rekeying/:splat 301
+/services/master-key-systems/* /services/commercial/master-key-systems/:splat 301
+/services/safe-opening/* /services/commercial/safe-opening/:splat 301
+/services/safe-installation/* /services/commercial/safe-installation/:splat 301
+/services/car-lockout-service/* /services/automotive/car-lockout/:splat 301
+/services/automotive-key-replacement/* /services/automotive/car-key-replacement/:splat 301
+/services/transponder-key-programming/* /services/automotive/transponder-key-programming/:splat 301
 /services/ignition-repair/* /services/automotive/ignition-repair/:splat 301
+/services/:cat/:sub/voorhees-township/ /services/:cat/:sub/voorhees/ 301
+
+# Service x town pages exist only for the 17 towns in SERVICE_PAGE_TOWNS
+# (src/data/indexingPriority.ts). Every other town's service pages 301 to its
+# town page. Regenerate these lines if SERVICE_PAGE_TOWNS changes.
+/services/:cat/:sub/audubon/ /locations/audubon/ 301
+/services/:cat/:sub/audubon-park/ /locations/audubon-park/ 301
+/services/:cat/:sub/barrington/ /locations/barrington/ 301
+/services/:cat/:sub/bellmawr/ /locations/bellmawr/ 301
+/services/:cat/:sub/berlin/ /locations/berlin/ 301
+/services/:cat/:sub/berlin-township/ /locations/berlin-township/ 301
+/services/:cat/:sub/brooklawn/ /locations/brooklawn/ 301
+/services/:cat/:sub/chesilhurst/ /locations/chesilhurst/ 301
+/services/:cat/:sub/clementon/ /locations/clementon/ 301
+/services/:cat/:sub/collingswood/ /locations/collingswood/ 301
+/services/:cat/:sub/gibbsboro/ /locations/gibbsboro/ 301
+/services/:cat/:sub/gloucester-city/ /locations/gloucester-city/ 301
+/services/:cat/:sub/haddon-heights/ /locations/haddon-heights/ 301
+/services/:cat/:sub/haddon-township/ /locations/haddon-township/ 301
+/services/:cat/:sub/haddonfield/ /locations/haddonfield/ 301
+/services/:cat/:sub/hi-nella/ /locations/hi-nella/ 301
+/services/:cat/:sub/laurel-springs/ /locations/laurel-springs/ 301
+/services/:cat/:sub/lawnside/ /locations/lawnside/ 301
+/services/:cat/:sub/lindenwold/ /locations/lindenwold/ 301
+/services/:cat/:sub/magnolia/ /locations/magnolia/ 301
+/services/:cat/:sub/merchantville/ /locations/merchantville/ 301
+/services/:cat/:sub/mount-ephraim/ /locations/mount-ephraim/ 301
+/services/:cat/:sub/oaklyn/ /locations/oaklyn/ 301
+/services/:cat/:sub/pine-hill/ /locations/pine-hill/ 301
+/services/:cat/:sub/pine-valley/ /locations/pine-valley/ 301
+/services/:cat/:sub/runnemede/ /locations/runnemede/ 301
+/services/:cat/:sub/somerdale/ /locations/somerdale/ 301
+/services/:cat/:sub/stratford/ /locations/stratford/ 301
+/services/:cat/:sub/tavistock/ /locations/tavistock/ 301
+/services/:cat/:sub/waterford-township/ /locations/waterford-township/ 301
+/services/:cat/:sub/woodlynne/ /locations/woodlynne/ 301
+/services/:cat/:sub/medford/ /locations/medford/ 301
+/services/:cat/:sub/cinnaminson/ /locations/cinnaminson/ 301
+/services/:cat/:sub/maple-shade/ /locations/maple-shade/ 301
+/services/:cat/:sub/mount-holly/ /locations/mount-holly/ 301
+/services/:cat/:sub/delran/ /locations/delran/ 301
+/services/:cat/:sub/riverside/ /locations/riverside/ 301
+/services/:cat/:sub/riverton/ /locations/riverton/ 301
+/services/:cat/:sub/palmyra/ /locations/palmyra/ 301
+/services/:cat/:sub/westampton/ /locations/westampton/ 301
+/services/:cat/:sub/hainesport/ /locations/hainesport/ 301
+/services/:cat/:sub/lumberton/ /locations/lumberton/ 301
+/services/:cat/:sub/medford-lakes/ /locations/medford-lakes/ 301
+/services/:cat/:sub/edgewater-park/ /locations/edgewater-park/ 301
+/services/:cat/:sub/burlington-city/ /locations/burlington-city/ 301
+/services/:cat/:sub/burlington-township/ /locations/burlington-township/ 301
+/services/:cat/:sub/florence/ /locations/florence/ 301
+/services/:cat/:sub/bordentown-city/ /locations/bordentown-city/ 301
+/services/:cat/:sub/bordentown-township/ /locations/bordentown-township/ 301
+/services/:cat/:sub/eastampton/ /locations/eastampton/ 301
+/services/:cat/:sub/springfield-township/ /locations/springfield-township/ 301
+/services/:cat/:sub/tabernacle/ /locations/tabernacle/ 301
+/services/:cat/:sub/southampton-township/ /locations/southampton-township/ 301
+/services/:cat/:sub/west-deptford/ /locations/west-deptford/ 301
+/services/:cat/:sub/woodbury/ /locations/woodbury/ 301
+/services/:cat/:sub/woodbury-heights/ /locations/woodbury-heights/ 301
+/services/:cat/:sub/glassboro/ /locations/glassboro/ 301
+/services/:cat/:sub/pitman/ /locations/pitman/ 301
+/services/:cat/:sub/mantua/ /locations/mantua/ 301
+/services/:cat/:sub/wenonah/ /locations/wenonah/ 301
+/services/:cat/:sub/national-park/ /locations/national-park/ 301
+/services/:cat/:sub/paulsboro/ /locations/paulsboro/ 301
+/services/:cat/:sub/swedesboro/ /locations/swedesboro/ 301
+/services/:cat/:sub/woolwich-township/ /locations/woolwich-township/ 301
+/services/:cat/:sub/east-greenwich/ /locations/east-greenwich/ 301
+/services/:cat/:sub/clayton/ /locations/clayton/ 301
+/services/:cat/:sub/logan-township/ /locations/logan-township/ 301
+/services/:cat/:sub/robbinsville/ /locations/robbinsville/ 301
+/services/:cat/:sub/carneys-point/ /locations/carneys-point/ 301
+/services/:cat/:sub/penns-grove/ /locations/penns-grove/ 301
+/services/:cat/:sub/pennsville/ /locations/pennsville/ 301
+/services/:cat/:sub/oldmans-township/ /locations/oldmans-township/ 301
+/services/:cat/:sub/pilesgrove/ /locations/pilesgrove/ 301
+/services/:cat/:sub/woodstown/ /locations/woodstown/ 301
+/services/:cat/:sub/hammonton/ /locations/hammonton/ 301
+/services/:cat/:sub/williamstown/ /locations/williamstown/ 301
