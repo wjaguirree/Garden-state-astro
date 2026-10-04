@@ -884,31 +884,6 @@ export const locations: Location[] = [
     }
   },
   {
-    slug: "voorhees-township", name: "Voorhees Township", county: "Camden County", state: "NJ", zipCodes: ["08043"],
-    nearbyLocations: ["cherry-hill", "gibbsboro", "berlin-township"], population: "30,000",
-    description: "A prominent suburban township with extensive retail and residential developments.",
-    profile: {
-      archetype: "suburban-affluent",
-      vibe: "a prominent affluent suburb of modern subdivisions, the Voorhees Town Center (former Echelon Mall), and the Flyers Skate Zone — home to many corporate professionals and physicians",
-      housingStock: ["1990s-2010s luxury subdivisions", "modern townhouse communities", "1980s split-levels", "newer custom-built single-families"],
-      landmarks: ["Voorhees Town Center", "Flyers Skate Zone (Eagles practice facility nearby)", "Centennial Lake", "the Virtua Voorhees Hospital", "Echelon Glen"],
-      neighborhoods: ["Echelon Glen", "Sturbridge Lakes", "Lions Head", "the Centennial Lake area", "Hidden Valley"],
-      serviceNotes: {
-        auto: "the Town Center, Skate Zone, and Virtua Hospital lots all generate steady car-lockout calls",
-        residential: "Voorhees subdivisions overwhelmingly want smart-lock and access-control upgrades over basic rekeys",
-        commercial: "corporate offices in Voorhees need master-key systems, access-control hardware, and high-security commercial deadbolts",
-        emergency: "modern smart locks sometimes fail in unexpected ways — battery, firmware, or pairing issues that need an experienced locksmith"
-      },
-      commonScenarios: [
-        "a Town Center shopper locked out after a long Saturday",
-        "an Echelon Glen homeowner upgrading from a builder-grade deadbolt to a smart lock",
-        "a corporate office in Voorhees needing access-control card programming",
-        "a broken key extracted on a job near Voorhees Town Center",
-        "a homeowner in the Centennial Lake area needing a fresh set of keys"
-      ]
-    }
-  },
-  {
     slug: "waterford-township", name: "Waterford Township", county: "Camden County", state: "NJ", zipCodes: ["08004"],
     nearbyLocations: ["chesilhurst", "winslow-township", "berlin"], population: "10,600",
     description: "A large township with rural character and access to the Pine Barrens.",

@@ -18,3 +18,30 @@ export const PRIORITY_SERVICE_LOCATION_LINKS: PriorityLink[] = [
   { label: "Transponder Key Programming in Pennsauken", href: "/services/automotive/transponder-key-programming/pennsauken/" },
 ];
 
+
+// Towns that keep their full set of service × town pages. Picked by
+// population (the 15 largest) plus Moorestown and Marlton (linked from the
+// homepage priority list). Every other town is served by its /locations/ page;
+// its old service × town URLs 301 there (see functions/_middleware.ts).
+// Add more towns in batches once these are indexed.
+export const SERVICE_PAGE_TOWNS: ReadonlySet<string> = new Set([
+  "trenton",
+  "hamilton",
+  "cherry-hill",
+  "camden",
+  "gloucester-township",
+  "washington-township",
+  "mount-laurel",
+  "winslow-township",
+  "monroe-township-gloucester",
+  "pennsauken",
+  "ewing",
+  "lawrence-township",
+  "willingboro",
+  "voorhees",
+  "deptford",
+  "moorestown",
+  "marlton",
+]);
+
+export const hasServicePages = (townSlug: string) => SERVICE_PAGE_TOWNS.has(townSlug);

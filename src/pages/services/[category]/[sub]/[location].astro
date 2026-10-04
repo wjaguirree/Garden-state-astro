@@ -3,6 +3,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { BookingForm } from "@/components/shared/BookingForm";
 import { categories } from "@/data/categories";
 import { locations } from "@/data/locations";
+import { hasServicePages } from "@/data/indexingPriority";
 import { Phone, Clock, CheckCircle2, ChevronRight, ArrowRight, MapPin, ShieldCheck, Star, Home as HomeIcon, Building2 } from "lucide-react";
 import {
   hashStr,
@@ -26,7 +27,7 @@ export function getStaticPaths() {
   const paths: Array<{ params: { category: string; sub: string; location: string } }> = [];
   for (const cat of categories) {
     for (const sub of cat.subServices) {
-      for (const loc of locations) {
+      for (const loc of locations.filter((l) => hasServicePages(l.slug))) {
         paths.push({ params: { category: cat.slug, sub: sub.slug, location: loc.slug } });
       }
     }
@@ -333,7 +334,7 @@ const faqSchema = {
                 {nearbyLocations.map((nl, i) => {
                   const anchorFn = nearbyAnchorVariants[(seed + i) % nearbyAnchorVariants.length];
                   return (
-                    <a href={`/services/${category.slug}/${subService.slug}/${nl.slug}/`} class="flex items-center justify-between p-4 rounded-xl border border-border/50 hover:border-primary/40 hover:bg-primary/5 transition-all group">
+                    <a href={hasServicePages(nl.slug) ? `/services/${category.slug}/${subService.slug}/${nl.slug}/` : `/locations/${nl.slug}/`} class="flex items-center justify-between p-4 rounded-xl border border-border/50 hover:border-primary/40 hover:bg-primary/5 transition-all group">
                       <div class="flex items-center gap-2">
                         <MapPin className="h-4 w-4 text-primary shrink-0" />
                         <div>

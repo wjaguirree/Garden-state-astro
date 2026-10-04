@@ -19,6 +19,7 @@ import {
   hubLocalHeading,
 } from "@/lib/locationHubContent";
 import { Phone, ShieldCheck, MapPin, Clock, ChevronRight, ArrowRight, Home as HomeIcon, Building2, Car, AlertTriangle, CheckCircle2 } from "lucide-react";
+import { hasServicePages } from "@/data/indexingPriority";
 
 export function getStaticPaths() {
   return locations.map((loc) => ({ params: { location: loc.slug }, props: { location: loc } }));
@@ -223,7 +224,7 @@ const schema = {
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {cat.subServices.map((sub) => (
-                <a href={`/services/${cat.slug}/${sub.slug}/${location.slug}/`} class="group flex items-center gap-3 bg-background border border-border/60 rounded-xl p-4 hover:border-accent hover:shadow-md transition-all">
+                <a href={hasServicePages(location.slug) ? `/services/${cat.slug}/${sub.slug}/${location.slug}/` : `/services/${cat.slug}/${sub.slug}/`} class="group flex items-center gap-3 bg-background border border-border/60 rounded-xl p-4 hover:border-accent hover:shadow-md transition-all">
                   <div class="shrink-0 h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center text-lg group-hover:bg-accent/15 transition-colors">{cat.emoji}</div>
                   <p class="flex-1 min-w-0 font-serif font-bold text-sm text-foreground leading-tight group-hover:text-primary transition-colors">{sub.name} in {location.name}</p>
                   <ArrowRight className="h-4 w-4 text-muted-foreground/40 group-hover:text-accent transition-colors shrink-0" />

@@ -8,6 +8,7 @@ import { locations } from "@/data/locations";
 import { generateServiceLocationContent } from "@/data/content";
 import { faqSchema } from "@/lib/seo";
 import { Phone, Clock, CheckCircle2, ChevronRight, ArrowRight, MapPin, ShieldCheck } from "lucide-react";
+import { hasServicePages } from "@/data/indexingPriority";
 
 // NOTE: the flat `/services/{service}/{town}` pages were removed — they targeted
 // the same search intent as `/services/{category}/{sub}/{town}` with roughly half
@@ -261,7 +262,7 @@ const { kind } = Astro.props;
                   </div>
                   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2">
                     {countyLocs.map((loc) => (
-                      <a href={`/services/${category.slug}/${subService.slug}/${loc.slug}/`} class="group flex items-center gap-2 px-3 py-2.5 rounded-lg border border-border/50 bg-background hover:border-primary/40 hover:bg-primary/5 transition-all">
+                      <a href={hasServicePages(loc.slug) ? `/services/${category.slug}/${subService.slug}/${loc.slug}/` : `/locations/${loc.slug}/`} class="group flex items-center gap-2 px-3 py-2.5 rounded-lg border border-border/50 bg-background hover:border-primary/40 hover:bg-primary/5 transition-all">
                         <div class="h-1.5 w-1.5 rounded-full bg-primary/50 group-hover:bg-primary shrink-0 transition-colors" />
                         <span class="text-sm font-medium text-foreground group-hover:text-primary transition-colors leading-tight">{loc.name}</span>
                       </a>
